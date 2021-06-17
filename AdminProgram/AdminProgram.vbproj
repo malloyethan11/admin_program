@@ -185,6 +185,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="README.md" />
     <None Include="Resources\Logo.png" />
   </ItemGroup>
   <ItemGroup>
