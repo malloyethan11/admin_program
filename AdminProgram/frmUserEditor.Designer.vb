@@ -37,6 +37,8 @@ Partial Class frmUserEditor
         Me.txtSKU = New System.Windows.Forms.TextBox()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.chkEdiVendors = New System.Windows.Forms.CheckBox()
+        Me.chkAddVendors = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'btnUpdate
@@ -194,12 +196,34 @@ Partial Class frmUserEditor
         Me.btnExit.Text = "Cancel"
         Me.btnExit.UseVisualStyleBackColor = True
         '
-        'frmItemEditor
+        'chkEdiVendors
+        '
+        Me.chkEdiVendors.AutoSize = True
+        Me.chkEdiVendors.Location = New System.Drawing.Point(340, 70)
+        Me.chkEdiVendors.Name = "chkEdiVendors"
+        Me.chkEdiVendors.Size = New System.Drawing.Size(85, 17)
+        Me.chkEdiVendors.TabIndex = 106
+        Me.chkEdiVendors.Text = "Edit vendors"
+        Me.chkEdiVendors.UseVisualStyleBackColor = True
+        '
+        'chkAddVendors
+        '
+        Me.chkAddVendors.AutoSize = True
+        Me.chkAddVendors.Location = New System.Drawing.Point(340, 93)
+        Me.chkAddVendors.Name = "chkAddVendors"
+        Me.chkAddVendors.Size = New System.Drawing.Size(86, 17)
+        Me.chkAddVendors.TabIndex = 105
+        Me.chkAddVendors.Text = "Add vendors"
+        Me.chkAddVendors.UseVisualStyleBackColor = True
+        '
+        'frmUserEditor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(594, 173)
+        Me.Controls.Add(Me.chkEdiVendors)
+        Me.Controls.Add(Me.chkAddVendors)
         Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.chkAddItems)
@@ -215,7 +239,7 @@ Partial Class frmUserEditor
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnUpdate)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "frmItemEditor"
+        Me.Name = "frmUserEditor"
         Me.Text = "Administration Program - User Editor"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -236,4 +260,6 @@ Partial Class frmUserEditor
     Friend WithEvents txtSKU As TextBox
     Friend WithEvents btnDelete As Button
     Friend WithEvents btnExit As Button
+    Friend WithEvents chkEdiVendors As CheckBox
+    Friend WithEvents chkAddVendors As CheckBox
 End Class
