@@ -1,5 +1,4 @@
-﻿
-Public Class frmUserLookup
+﻿Public Class frmUserLookup
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -15,4 +14,5 @@ Public Class frmUserLookup
         Next
 
     End Sub
+
 End Class

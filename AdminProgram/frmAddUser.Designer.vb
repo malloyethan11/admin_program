@@ -36,6 +36,8 @@ Partial Class frmAddUser
         Me.chkAddItems = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.chkAddVendors = New System.Windows.Forms.CheckBox()
+        Me.chkEdiVendors = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'txtDescription
@@ -180,7 +182,27 @@ Partial Class frmAddUser
         Me.CheckBox2.Text = "Mass pricing"
         Me.CheckBox2.UseVisualStyleBackColor = True
         '
-        'frmAddItem
+        'chkAddVendors
+        '
+        Me.chkAddVendors.AutoSize = True
+        Me.chkAddVendors.Location = New System.Drawing.Point(340, 93)
+        Me.chkAddVendors.Name = "chkAddVendors"
+        Me.chkAddVendors.Size = New System.Drawing.Size(86, 17)
+        Me.chkAddVendors.TabIndex = 5
+        Me.chkAddVendors.Text = "Add vendors"
+        Me.chkAddVendors.UseVisualStyleBackColor = True
+        '
+        'chkEdiVendors
+        '
+        Me.chkEdiVendors.AutoSize = True
+        Me.chkEdiVendors.Location = New System.Drawing.Point(340, 70)
+        Me.chkEdiVendors.Name = "chkEdiVendors"
+        Me.chkEdiVendors.Size = New System.Drawing.Size(85, 17)
+        Me.chkEdiVendors.TabIndex = 6
+        Me.chkEdiVendors.Text = "Edit vendors"
+        Me.chkEdiVendors.UseVisualStyleBackColor = True
+        '
+        'frmAddUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -188,7 +210,9 @@ Partial Class frmAddUser
         Me.ClientSize = New System.Drawing.Size(594, 173)
         Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.chkEdiVendors)
         Me.Controls.Add(Me.chkAddItems)
+        Me.Controls.Add(Me.chkAddVendors)
         Me.Controls.Add(Me.chkEditItem)
         Me.Controls.Add(Me.chkReturns)
         Me.Controls.Add(Me.chkCheckout)
@@ -200,7 +224,7 @@ Partial Class frmAddUser
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.btnExit)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "frmAddItem"
+        Me.Name = "frmAddUser"
         Me.Text = "Administration Program - Add User"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -219,4 +243,6 @@ Partial Class frmAddUser
     Friend WithEvents chkAddItems As CheckBox
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents chkAddVendors As CheckBox
+    Friend WithEvents chkEdiVendors As CheckBox
 End Class
