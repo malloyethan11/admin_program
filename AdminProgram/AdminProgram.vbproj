@@ -97,6 +97,12 @@
     <Compile Include="frmAddUser.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmLoadCredentials.Designer.vb">
+      <DependentUpon>frmLoadCredentials.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoadCredentials.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmUsers.Designer.vb">
       <DependentUpon>frmUsers.vb</DependentUpon>
     </Compile>
@@ -128,7 +134,9 @@
     <Compile Include="frmReports.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="modDatabaseUtilities.vb" />
     <Compile Include="ModuleCommonUtilities.vb" />
+    <Compile Include="ModuleGlobalConstantsAndVariables.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -149,6 +157,9 @@
   <ItemGroup>
     <EmbeddedResource Include="frmAddUser.resx">
       <DependentUpon>frmAddUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadCredentials.resx">
+      <DependentUpon>frmLoadCredentials.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUsers.resx">
       <DependentUpon>frmUsers.vb</DependentUpon>
@@ -185,7 +196,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="README.md" />
     <None Include="Resources\Logo.png" />
   </ItemGroup>
   <ItemGroup>

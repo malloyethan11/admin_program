@@ -16,3 +16,4 @@ D:\College Homework\CAPSTONE\AdminFormsDesign\AdminProgram\obj\Debug\AdminProgra
 D:\College Homework\CAPSTONE\AdminFormsDesign\AdminProgram\obj\Debug\AdminFormsDesign.exe
 D:\College Homework\CAPSTONE\AdminFormsDesign\AdminProgram\obj\Debug\AdminFormsDesign.xml
 D:\College Homework\CAPSTONE\AdminFormsDesign\AdminProgram\obj\Debug\AdminFormsDesign.pdb
+D:\College Homework\CAPSTONE\AdminFormsDesign\AdminProgram\obj\Debug\AdminFormsDesign.frmLoadCredentials.resources

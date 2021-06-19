@@ -122,4 +122,21 @@ Module ModuleCommonUtilities
 
     End Sub
 
+    ' Open a form and close the current form
+    Public Function OpenFormKillParent(ByRef frmSelf As Form, ByVal frmToOpen As Form) As DialogResult
+
+        ' Init variables
+        Dim dlgResult As DialogResult
+
+        ' Make new form
+        frmToOpen.Show()
+
+        ' Kill self
+        frmSelf.Close()
+
+        ' Return result
+        Return dlgResult
+
+    End Function
+
 End Module
