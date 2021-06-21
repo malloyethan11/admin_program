@@ -79,4 +79,12 @@
 
     End Sub
 
+    Private Sub btnOpen_Click(sender As Object, e As EventArgs) Handles btnOpen.Click
+
+        Dim frmNewUserEditor As New frmUserEditor
+        frmNewUserEditor.intCurrentlyEditingUserPrimaryKey = cboUsers.SelectedValue
+
+        OpenFormKillParent(Me, frmNewUserEditor)
+
+    End Sub
 End Class
