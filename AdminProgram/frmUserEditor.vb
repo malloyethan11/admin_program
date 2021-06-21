@@ -1,5 +1,7 @@
 ﻿Public Class frmUserEditor
 
+    Public intCurrentlyEditingUserPrimaryKey As Integer
+
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         For Each Control In Controls
