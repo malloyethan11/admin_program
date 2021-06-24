@@ -81,7 +81,7 @@ Partial Class frmUsers
         Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
         '
-        'frmInventory
+        'frmUsers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -92,7 +92,7 @@ Partial Class frmUsers
         Me.Controls.Add(Me.btnUserLookup)
         Me.Controls.Add(Me.btnExit)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "frmInventory"
+        Me.Name = "frmUsers"
         Me.Text = "Administration Program - Users"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
