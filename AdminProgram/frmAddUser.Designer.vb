@@ -34,8 +34,8 @@ Partial Class frmAddUser
         Me.lblPermissions = New System.Windows.Forms.Label()
         Me.chkEditItem = New System.Windows.Forms.CheckBox()
         Me.chkAddItems = New System.Windows.Forms.CheckBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.chkDeleteItems = New System.Windows.Forms.CheckBox()
+        Me.chkMassPricing = New System.Windows.Forms.CheckBox()
         Me.chkAddVendors = New System.Windows.Forms.CheckBox()
         Me.chkEdiVendors = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
@@ -162,25 +162,25 @@ Partial Class frmAddUser
         Me.chkAddItems.Text = "Add items"
         Me.chkAddItems.UseVisualStyleBackColor = True
         '
-        'CheckBox1
+        'chkDeleteItems
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(250, 70)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(84, 17)
-        Me.CheckBox1.TabIndex = 7
-        Me.CheckBox1.Text = "Delete items"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.chkDeleteItems.AutoSize = True
+        Me.chkDeleteItems.Location = New System.Drawing.Point(250, 70)
+        Me.chkDeleteItems.Name = "chkDeleteItems"
+        Me.chkDeleteItems.Size = New System.Drawing.Size(84, 17)
+        Me.chkDeleteItems.TabIndex = 7
+        Me.chkDeleteItems.Text = "Delete items"
+        Me.chkDeleteItems.UseVisualStyleBackColor = True
         '
-        'CheckBox2
+        'chkMassPricing
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(250, 93)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(85, 17)
-        Me.CheckBox2.TabIndex = 7
-        Me.CheckBox2.Text = "Mass pricing"
-        Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.chkMassPricing.AutoSize = True
+        Me.chkMassPricing.Location = New System.Drawing.Point(250, 93)
+        Me.chkMassPricing.Name = "chkMassPricing"
+        Me.chkMassPricing.Size = New System.Drawing.Size(85, 17)
+        Me.chkMassPricing.TabIndex = 7
+        Me.chkMassPricing.Text = "Mass pricing"
+        Me.chkMassPricing.UseVisualStyleBackColor = True
         '
         'chkAddVendors
         '
@@ -208,8 +208,8 @@ Partial Class frmAddUser
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(594, 173)
-        Me.Controls.Add(Me.CheckBox2)
-        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.chkMassPricing)
+        Me.Controls.Add(Me.chkDeleteItems)
         Me.Controls.Add(Me.chkEdiVendors)
         Me.Controls.Add(Me.chkAddItems)
         Me.Controls.Add(Me.chkAddVendors)
@@ -241,8 +241,8 @@ Partial Class frmAddUser
     Friend WithEvents lblPermissions As Label
     Friend WithEvents chkEditItem As CheckBox
     Friend WithEvents chkAddItems As CheckBox
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents chkDeleteItems As CheckBox
+    Friend WithEvents chkMassPricing As CheckBox
     Friend WithEvents chkAddVendors As CheckBox
     Friend WithEvents chkEdiVendors As CheckBox
 End Class
