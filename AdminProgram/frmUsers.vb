@@ -14,4 +14,24 @@
 
     End Sub
 
+    Private Sub btnUserLookup_Click(sender As Object, e As EventArgs) Handles btnUserLookup.Click
+
+        ' open frmUserLookup
+        frmUserLookup.ShowDialog()
+
+    End Sub
+
+    Private Sub btnAddUser_Click(sender As Object, e As EventArgs) Handles btnAddUser.Click
+
+        ' open frmAddUser
+        frmAddUser.ShowDialog()
+
+    End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+
+        ' close frmUsers, open frmMain
+        OpenFormKillParent(Me, frmMain)
+
+    End Sub
 End Class

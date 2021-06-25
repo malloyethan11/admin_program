@@ -14,8 +14,24 @@
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+
+        ' close the form
         Me.Close()
+
     End Sub
 
+    Private Sub btnUsers_Click(sender As Object, e As EventArgs) Handles btnUsers.Click
+
+        ' open frmUsers and kill frmMain
+        OpenFormKillParent(Me, frmUsers)
+
+    End Sub
+
+    Private Sub btnReports_Click(sender As Object, e As EventArgs) Handles btnReports.Click
+
+        ' open frmReports and kill frmMain
+        OpenFormKillParent(Me, frmReports)
+
+    End Sub
 End Class
