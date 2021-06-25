@@ -2,6 +2,8 @@
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        Me.CenterToScreen()
+
         For Each Control In Controls
             If Control.GetType() = GetType(Button) Then
                 Control.FlatStyle = FlatStyle.Flat
@@ -85,6 +87,12 @@
         frmNewUserEditor.intCurrentlyEditingUserPrimaryKey = cboUsers.SelectedValue
 
         OpenFormKillParent(Me, frmNewUserEditor)
+
+    End Sub
+
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+
+        OpenFormKillParent(Me, frmUsers)
 
     End Sub
 End Class

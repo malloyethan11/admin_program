@@ -2,6 +2,8 @@
 
     Private Sub frmInventory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        Me.CenterToScreen()
+
         For Each Control In Controls
             If Control.GetType() = GetType(Button) Then
                 Control.FlatStyle = FlatStyle.Flat
@@ -17,14 +19,14 @@
     Private Sub btnUserLookup_Click(sender As Object, e As EventArgs) Handles btnUserLookup.Click
 
         ' open frmUserLookup
-        frmUserLookup.ShowDialog()
+        OpenFormKillParent(Me, frmUserLookup)
 
     End Sub
 
     Private Sub btnAddUser_Click(sender As Object, e As EventArgs) Handles btnAddUser.Click
 
         ' open frmAddUser
-        frmAddUser.ShowDialog()
+        OpenFormKillParent(Me, frmAddUser)
 
     End Sub
 
