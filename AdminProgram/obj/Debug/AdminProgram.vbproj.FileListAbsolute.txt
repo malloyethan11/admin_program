@@ -54,3 +54,4 @@ C:\Users\Nikhil\Documents\repo\admin_program\AdminProgram\obj\Debug\AdminProgram
 C:\Users\Nikhil\Documents\repo\admin_program\AdminProgram\obj\Debug\AdminFormsDesign.exe
 C:\Users\Nikhil\Documents\repo\admin_program\AdminProgram\obj\Debug\AdminFormsDesign.xml
 C:\Users\Nikhil\Documents\repo\admin_program\AdminProgram\obj\Debug\AdminFormsDesign.pdb
+C:\Users\Nikhil\Documents\repo\admin_program\AdminProgram\obj\Debug\AdminProgram.vbproj.AssemblyReference.cache

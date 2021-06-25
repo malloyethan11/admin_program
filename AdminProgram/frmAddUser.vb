@@ -38,7 +38,7 @@ Public Class frmAddUser
                 Me.Close()
 
             End If
-            Dim cmdInsert = New OleDbCommand("INSERT INTO TUsers VALUES(?,?,?,?,?,?,?,?,?,?)")
+            Dim cmdInsert = New OleDbCommand("INSERT INTO TUsers(strUsername, strPassword, blnCheckout, blnReturns, btnAddItems, btnEditItems, btnDeleteItems, blnMassPricing, blnAddVendors, blnEditVendors) VALUES(?,?,?,?,?,?,?,?,?,?)")
             cmdInsert.CommandType = CommandType.Text
             cmdInsert.Connection = m_conAdministrator
             ' Username Password
