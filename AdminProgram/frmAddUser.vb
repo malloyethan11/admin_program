@@ -38,24 +38,25 @@ Public Class frmAddUser
                 Me.Close()
 
             End If
-            Dim cmdInsert = New OleDbCommand("INSERT INTO TUsers(strUsername, strPassword, blnCheckout, blnReturns, btnAddItems, btnEditItems, btnDeleteItems, blnMassPricing, blnAddVendors, blnEditVendors) VALUES(?,?,?,?,?,?,?,?,?,?)")
+            Dim cmdInsert = New OleDbCommand("INSERT INTO TUsers(strUsername, strPassword, blnCheckout, blnReturns, blnAddItems, blnEditItems, blnDeleteItems, blnMassPricing, blnAddVendors, blnEditVendors) VALUES(?,?,?,?,?,?,?,?,?,?)")
             cmdInsert.CommandType = CommandType.Text
             cmdInsert.Connection = m_conAdministrator
             ' Username Password
-            cmdInsert.Parameters.AddWithValue("strUsername", txtSKU)
-            cmdInsert.Parameters.AddWithValue("strPassword", txtDescription)
+            cmdInsert.Parameters.AddWithValue("strUsername", txtSKU.Text)
+            cmdInsert.Parameters.AddWithValue("strPassword", txtDescription.Text)
             ' Permission
-            cmdInsert.Parameters.AddWithValue("blnCheckout", chkCheckout)
-            cmdInsert.Parameters.AddWithValue("blnReturns", chkReturns)
-            cmdInsert.Parameters.AddWithValue("blnAddItems", chkAddItems)
-            cmdInsert.Parameters.AddWithValue("blnEditItems", chkEditItem)
-            cmdInsert.Parameters.AddWithValue("blnDeleteItems", chkDeleteItems)
-            cmdInsert.Parameters.AddWithValue("blnMassPricing", chkMassPricing)
-            cmdInsert.Parameters.AddWithValue("blnAddVendors", chkAddVendors)
-            cmdInsert.Parameters.AddWithValue("blnEditVendors", chkEdiVendors)
+            cmdInsert.Parameters.AddWithValue("blnCheckout", chkCheckout.Checked)
+            cmdInsert.Parameters.AddWithValue("blnReturns", chkReturns.Checked)
+            cmdInsert.Parameters.AddWithValue("blnAddItems", chkAddItems.Checked)
+            cmdInsert.Parameters.AddWithValue("blnEditItems", chkEditItem.Checked)
+            cmdInsert.Parameters.AddWithValue("blnDeleteItems", chkDeleteItems.Checked)
+            cmdInsert.Parameters.AddWithValue("blnMassPricing", chkMassPricing.Checked)
+            cmdInsert.Parameters.AddWithValue("blnAddVendors", chkAddVendors.Checked)
+            cmdInsert.Parameters.AddWithValue("blnEditVendors", chkEdiVendors.Checked)
             ' Proceed with the database
             Dim result = cmdInsert.ExecuteNonQuery()
             ' If result is one that means a row is added
+            MessageBox.Show(result.ToString + " User Added successfully")
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
