@@ -57,8 +57,16 @@ Public Class frmAddUser
             Dim result = cmdInsert.ExecuteNonQuery()
             ' If result is one that means a row is added
             MessageBox.Show(result.ToString + " User Added successfully")
+        Catch excError As System.Data.SqlClient.SqlException
+
+            ' Handle SQL errors
+            MessageBox.Show(excError.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+
+            ' Handle general errors
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
         End Try
     End Sub
 End Class
