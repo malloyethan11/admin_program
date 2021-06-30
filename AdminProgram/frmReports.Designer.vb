@@ -32,18 +32,22 @@ Partial Class frmReports
         Me.chkSalesReportWeekly = New System.Windows.Forms.CheckBox()
         Me.chkSalesReportMonthly = New System.Windows.Forms.CheckBox()
         Me.chkSalesReportYearly = New System.Windows.Forms.CheckBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox7 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox9 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox10 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox11 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox12 = New System.Windows.Forms.CheckBox()
+        Me.chkSTRDaily = New System.Windows.Forms.CheckBox()
+        Me.chkSTRWeekly = New System.Windows.Forms.CheckBox()
+        Me.chkSTRMonthly = New System.Windows.Forms.CheckBox()
+        Me.chkSTRYearly = New System.Windows.Forms.CheckBox()
+        Me.chkIRDaily = New System.Windows.Forms.CheckBox()
+        Me.chkIRWeekly = New System.Windows.Forms.CheckBox()
+        Me.chkIRMonthly = New System.Windows.Forms.CheckBox()
+        Me.chkIRYearly = New System.Windows.Forms.CheckBox()
+        Me.chkDRDaily = New System.Windows.Forms.CheckBox()
+        Me.chkDRWeekly = New System.Windows.Forms.CheckBox()
+        Me.chkDRMonthly = New System.Windows.Forms.CheckBox()
+        Me.chkDRYearly = New System.Windows.Forms.CheckBox()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnSubmit = New System.Windows.Forms.Button()
+        Me.lblProgress = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnExit
@@ -52,9 +56,9 @@ Partial Class frmReports
         Me.btnExit.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnExit.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.Image = Global.AdminFormsDesign.My.Resources.Resources.Button
-        Me.btnExit.Location = New System.Drawing.Point(44, 115)
+        Me.btnExit.Location = New System.Drawing.Point(89, 184)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(284, 42)
+        Me.btnExit.Size = New System.Drawing.Size(185, 42)
         Me.btnExit.TabIndex = 9
         Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
@@ -62,7 +66,7 @@ Partial Class frmReports
         'lblSalesReport
         '
         Me.lblSalesReport.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblSalesReport.Location = New System.Drawing.Point(12, 9)
+        Me.lblSalesReport.Location = New System.Drawing.Point(86, 43)
         Me.lblSalesReport.Name = "lblSalesReport"
         Me.lblSalesReport.Size = New System.Drawing.Size(93, 18)
         Me.lblSalesReport.TabIndex = 11
@@ -72,7 +76,7 @@ Partial Class frmReports
         'lblSalesTaxReport
         '
         Me.lblSalesTaxReport.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblSalesTaxReport.Location = New System.Drawing.Point(12, 36)
+        Me.lblSalesTaxReport.Location = New System.Drawing.Point(86, 70)
         Me.lblSalesTaxReport.Name = "lblSalesTaxReport"
         Me.lblSalesTaxReport.Size = New System.Drawing.Size(93, 18)
         Me.lblSalesTaxReport.TabIndex = 11
@@ -82,7 +86,7 @@ Partial Class frmReports
         'lblInventoryReport
         '
         Me.lblInventoryReport.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblInventoryReport.Location = New System.Drawing.Point(12, 63)
+        Me.lblInventoryReport.Location = New System.Drawing.Point(86, 97)
         Me.lblInventoryReport.Name = "lblInventoryReport"
         Me.lblInventoryReport.Size = New System.Drawing.Size(93, 18)
         Me.lblInventoryReport.TabIndex = 11
@@ -92,7 +96,7 @@ Partial Class frmReports
         'lblCashDepositReport
         '
         Me.lblCashDepositReport.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblCashDepositReport.Location = New System.Drawing.Point(15, 90)
+        Me.lblCashDepositReport.Location = New System.Drawing.Point(89, 124)
         Me.lblCashDepositReport.Name = "lblCashDepositReport"
         Me.lblCashDepositReport.Size = New System.Drawing.Size(90, 18)
         Me.lblCashDepositReport.TabIndex = 11
@@ -103,7 +107,7 @@ Partial Class frmReports
         '
         Me.chkSalesReportDaily.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkSalesReportDaily.AutoSize = True
-        Me.chkSalesReportDaily.Location = New System.Drawing.Point(111, 11)
+        Me.chkSalesReportDaily.Location = New System.Drawing.Point(185, 45)
         Me.chkSalesReportDaily.Name = "chkSalesReportDaily"
         Me.chkSalesReportDaily.Size = New System.Drawing.Size(49, 17)
         Me.chkSalesReportDaily.TabIndex = 12
@@ -114,7 +118,7 @@ Partial Class frmReports
         '
         Me.chkSalesReportWeekly.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkSalesReportWeekly.AutoSize = True
-        Me.chkSalesReportWeekly.Location = New System.Drawing.Point(165, 11)
+        Me.chkSalesReportWeekly.Location = New System.Drawing.Point(239, 45)
         Me.chkSalesReportWeekly.Name = "chkSalesReportWeekly"
         Me.chkSalesReportWeekly.Size = New System.Drawing.Size(62, 17)
         Me.chkSalesReportWeekly.TabIndex = 12
@@ -125,7 +129,7 @@ Partial Class frmReports
         '
         Me.chkSalesReportMonthly.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkSalesReportMonthly.AutoSize = True
-        Me.chkSalesReportMonthly.Location = New System.Drawing.Point(233, 11)
+        Me.chkSalesReportMonthly.Location = New System.Drawing.Point(307, 45)
         Me.chkSalesReportMonthly.Name = "chkSalesReportMonthly"
         Me.chkSalesReportMonthly.Size = New System.Drawing.Size(63, 17)
         Me.chkSalesReportMonthly.TabIndex = 12
@@ -136,166 +140,208 @@ Partial Class frmReports
         '
         Me.chkSalesReportYearly.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkSalesReportYearly.AutoSize = True
-        Me.chkSalesReportYearly.Location = New System.Drawing.Point(302, 11)
+        Me.chkSalesReportYearly.Location = New System.Drawing.Point(376, 45)
         Me.chkSalesReportYearly.Name = "chkSalesReportYearly"
         Me.chkSalesReportYearly.Size = New System.Drawing.Size(55, 17)
         Me.chkSalesReportYearly.TabIndex = 12
         Me.chkSalesReportYearly.Text = "Yearly"
         Me.chkSalesReportYearly.UseVisualStyleBackColor = True
         '
-        'CheckBox1
+        'chkSTRDaily
         '
-        Me.CheckBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(111, 38)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(49, 17)
-        Me.CheckBox1.TabIndex = 12
-        Me.CheckBox1.Text = "Daily"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.chkSTRDaily.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.chkSTRDaily.AutoSize = True
+        Me.chkSTRDaily.Location = New System.Drawing.Point(185, 72)
+        Me.chkSTRDaily.Name = "chkSTRDaily"
+        Me.chkSTRDaily.Size = New System.Drawing.Size(49, 17)
+        Me.chkSTRDaily.TabIndex = 12
+        Me.chkSTRDaily.Text = "Daily"
+        Me.chkSTRDaily.UseVisualStyleBackColor = True
         '
-        'CheckBox2
+        'chkSTRWeekly
         '
-        Me.CheckBox2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(165, 38)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(62, 17)
-        Me.CheckBox2.TabIndex = 12
-        Me.CheckBox2.Text = "Weekly"
-        Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.chkSTRWeekly.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.chkSTRWeekly.AutoSize = True
+        Me.chkSTRWeekly.Location = New System.Drawing.Point(239, 72)
+        Me.chkSTRWeekly.Name = "chkSTRWeekly"
+        Me.chkSTRWeekly.Size = New System.Drawing.Size(62, 17)
+        Me.chkSTRWeekly.TabIndex = 12
+        Me.chkSTRWeekly.Text = "Weekly"
+        Me.chkSTRWeekly.UseVisualStyleBackColor = True
         '
-        'CheckBox3
+        'chkSTRMonthly
         '
-        Me.CheckBox3.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(233, 38)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(63, 17)
-        Me.CheckBox3.TabIndex = 12
-        Me.CheckBox3.Text = "Monthly"
-        Me.CheckBox3.UseVisualStyleBackColor = True
+        Me.chkSTRMonthly.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.chkSTRMonthly.AutoSize = True
+        Me.chkSTRMonthly.Location = New System.Drawing.Point(307, 72)
+        Me.chkSTRMonthly.Name = "chkSTRMonthly"
+        Me.chkSTRMonthly.Size = New System.Drawing.Size(63, 17)
+        Me.chkSTRMonthly.TabIndex = 12
+        Me.chkSTRMonthly.Text = "Monthly"
+        Me.chkSTRMonthly.UseVisualStyleBackColor = True
         '
-        'CheckBox4
+        'chkSTRYearly
         '
-        Me.CheckBox4.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Location = New System.Drawing.Point(302, 38)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(55, 17)
-        Me.CheckBox4.TabIndex = 12
-        Me.CheckBox4.Text = "Yearly"
-        Me.CheckBox4.UseVisualStyleBackColor = True
+        Me.chkSTRYearly.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.chkSTRYearly.AutoSize = True
+        Me.chkSTRYearly.Location = New System.Drawing.Point(376, 72)
+        Me.chkSTRYearly.Name = "chkSTRYearly"
+        Me.chkSTRYearly.Size = New System.Drawing.Size(55, 17)
+        Me.chkSTRYearly.TabIndex = 12
+        Me.chkSTRYearly.Text = "Yearly"
+        Me.chkSTRYearly.UseVisualStyleBackColor = True
         '
-        'CheckBox5
+        'chkIRDaily
         '
-        Me.CheckBox5.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Location = New System.Drawing.Point(111, 65)
-        Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(49, 17)
-        Me.CheckBox5.TabIndex = 12
-        Me.CheckBox5.Text = "Daily"
-        Me.CheckBox5.UseVisualStyleBackColor = True
+        Me.chkIRDaily.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.chkIRDaily.AutoSize = True
+        Me.chkIRDaily.Location = New System.Drawing.Point(185, 99)
+        Me.chkIRDaily.Name = "chkIRDaily"
+        Me.chkIRDaily.Size = New System.Drawing.Size(49, 17)
+        Me.chkIRDaily.TabIndex = 12
+        Me.chkIRDaily.Text = "Daily"
+        Me.chkIRDaily.UseVisualStyleBackColor = True
         '
-        'CheckBox6
+        'chkIRWeekly
         '
-        Me.CheckBox6.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.CheckBox6.AutoSize = True
-        Me.CheckBox6.Location = New System.Drawing.Point(165, 65)
-        Me.CheckBox6.Name = "CheckBox6"
-        Me.CheckBox6.Size = New System.Drawing.Size(62, 17)
-        Me.CheckBox6.TabIndex = 12
-        Me.CheckBox6.Text = "Weekly"
-        Me.CheckBox6.UseVisualStyleBackColor = True
+        Me.chkIRWeekly.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.chkIRWeekly.AutoSize = True
+        Me.chkIRWeekly.Location = New System.Drawing.Point(239, 99)
+        Me.chkIRWeekly.Name = "chkIRWeekly"
+        Me.chkIRWeekly.Size = New System.Drawing.Size(62, 17)
+        Me.chkIRWeekly.TabIndex = 12
+        Me.chkIRWeekly.Text = "Weekly"
+        Me.chkIRWeekly.UseVisualStyleBackColor = True
         '
-        'CheckBox7
+        'chkIRMonthly
         '
-        Me.CheckBox7.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.CheckBox7.AutoSize = True
-        Me.CheckBox7.Location = New System.Drawing.Point(233, 65)
-        Me.CheckBox7.Name = "CheckBox7"
-        Me.CheckBox7.Size = New System.Drawing.Size(63, 17)
-        Me.CheckBox7.TabIndex = 12
-        Me.CheckBox7.Text = "Monthly"
-        Me.CheckBox7.UseVisualStyleBackColor = True
+        Me.chkIRMonthly.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.chkIRMonthly.AutoSize = True
+        Me.chkIRMonthly.Location = New System.Drawing.Point(307, 99)
+        Me.chkIRMonthly.Name = "chkIRMonthly"
+        Me.chkIRMonthly.Size = New System.Drawing.Size(63, 17)
+        Me.chkIRMonthly.TabIndex = 12
+        Me.chkIRMonthly.Text = "Monthly"
+        Me.chkIRMonthly.UseVisualStyleBackColor = True
         '
-        'CheckBox8
+        'chkIRYearly
         '
-        Me.CheckBox8.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.CheckBox8.AutoSize = True
-        Me.CheckBox8.Location = New System.Drawing.Point(302, 65)
-        Me.CheckBox8.Name = "CheckBox8"
-        Me.CheckBox8.Size = New System.Drawing.Size(55, 17)
-        Me.CheckBox8.TabIndex = 12
-        Me.CheckBox8.Text = "Yearly"
-        Me.CheckBox8.UseVisualStyleBackColor = True
+        Me.chkIRYearly.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.chkIRYearly.AutoSize = True
+        Me.chkIRYearly.Location = New System.Drawing.Point(376, 99)
+        Me.chkIRYearly.Name = "chkIRYearly"
+        Me.chkIRYearly.Size = New System.Drawing.Size(55, 17)
+        Me.chkIRYearly.TabIndex = 12
+        Me.chkIRYearly.Text = "Yearly"
+        Me.chkIRYearly.UseVisualStyleBackColor = True
         '
-        'CheckBox9
+        'chkDRDaily
         '
-        Me.CheckBox9.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.CheckBox9.AutoSize = True
-        Me.CheckBox9.Location = New System.Drawing.Point(111, 92)
-        Me.CheckBox9.Name = "CheckBox9"
-        Me.CheckBox9.Size = New System.Drawing.Size(49, 17)
-        Me.CheckBox9.TabIndex = 12
-        Me.CheckBox9.Text = "Daily"
-        Me.CheckBox9.UseVisualStyleBackColor = True
+        Me.chkDRDaily.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.chkDRDaily.AutoSize = True
+        Me.chkDRDaily.Location = New System.Drawing.Point(185, 126)
+        Me.chkDRDaily.Name = "chkDRDaily"
+        Me.chkDRDaily.Size = New System.Drawing.Size(49, 17)
+        Me.chkDRDaily.TabIndex = 12
+        Me.chkDRDaily.Text = "Daily"
+        Me.chkDRDaily.UseVisualStyleBackColor = True
         '
-        'CheckBox10
+        'chkDRWeekly
         '
-        Me.CheckBox10.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.CheckBox10.AutoSize = True
-        Me.CheckBox10.Location = New System.Drawing.Point(165, 92)
-        Me.CheckBox10.Name = "CheckBox10"
-        Me.CheckBox10.Size = New System.Drawing.Size(62, 17)
-        Me.CheckBox10.TabIndex = 12
-        Me.CheckBox10.Text = "Weekly"
-        Me.CheckBox10.UseVisualStyleBackColor = True
+        Me.chkDRWeekly.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.chkDRWeekly.AutoSize = True
+        Me.chkDRWeekly.Location = New System.Drawing.Point(239, 126)
+        Me.chkDRWeekly.Name = "chkDRWeekly"
+        Me.chkDRWeekly.Size = New System.Drawing.Size(62, 17)
+        Me.chkDRWeekly.TabIndex = 12
+        Me.chkDRWeekly.Text = "Weekly"
+        Me.chkDRWeekly.UseVisualStyleBackColor = True
         '
-        'CheckBox11
+        'chkDRMonthly
         '
-        Me.CheckBox11.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.CheckBox11.AutoSize = True
-        Me.CheckBox11.Location = New System.Drawing.Point(233, 92)
-        Me.CheckBox11.Name = "CheckBox11"
-        Me.CheckBox11.Size = New System.Drawing.Size(63, 17)
-        Me.CheckBox11.TabIndex = 12
-        Me.CheckBox11.Text = "Monthly"
-        Me.CheckBox11.UseVisualStyleBackColor = True
+        Me.chkDRMonthly.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.chkDRMonthly.AutoSize = True
+        Me.chkDRMonthly.Location = New System.Drawing.Point(307, 126)
+        Me.chkDRMonthly.Name = "chkDRMonthly"
+        Me.chkDRMonthly.Size = New System.Drawing.Size(63, 17)
+        Me.chkDRMonthly.TabIndex = 12
+        Me.chkDRMonthly.Text = "Monthly"
+        Me.chkDRMonthly.UseVisualStyleBackColor = True
         '
-        'CheckBox12
+        'chkDRYearly
         '
-        Me.CheckBox12.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.CheckBox12.AutoSize = True
-        Me.CheckBox12.Location = New System.Drawing.Point(302, 92)
-        Me.CheckBox12.Name = "CheckBox12"
-        Me.CheckBox12.Size = New System.Drawing.Size(55, 17)
-        Me.CheckBox12.TabIndex = 12
-        Me.CheckBox12.Text = "Yearly"
-        Me.CheckBox12.UseVisualStyleBackColor = True
+        Me.chkDRYearly.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.chkDRYearly.AutoSize = True
+        Me.chkDRYearly.Location = New System.Drawing.Point(376, 126)
+        Me.chkDRYearly.Name = "chkDRYearly"
+        Me.chkDRYearly.Size = New System.Drawing.Size(55, 17)
+        Me.chkDRYearly.TabIndex = 12
+        Me.chkDRYearly.Text = "Yearly"
+        Me.chkDRYearly.UseVisualStyleBackColor = True
+        '
+        'txtEmail
+        '
+        Me.txtEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmail.Location = New System.Drawing.Point(152, 155)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(279, 23)
+        Me.txtEmail.TabIndex = 13
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(100, 160)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(46, 13)
+        Me.Label1.TabIndex = 14
+        Me.Label1.Text = "Email ID"
+        '
+        'btnSubmit
+        '
+        Me.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSubmit.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSubmit.Image = Global.AdminFormsDesign.My.Resources.Resources.Button
+        Me.btnSubmit.Location = New System.Drawing.Point(280, 183)
+        Me.btnSubmit.Name = "btnSubmit"
+        Me.btnSubmit.Size = New System.Drawing.Size(185, 42)
+        Me.btnSubmit.TabIndex = 15
+        Me.btnSubmit.Text = "Add"
+        Me.btnSubmit.UseVisualStyleBackColor = True
+        '
+        'lblProgress
+        '
+        Me.lblProgress.AutoSize = True
+        Me.lblProgress.Location = New System.Drawing.Point(12, 9)
+        Me.lblProgress.Name = "lblProgress"
+        Me.lblProgress.Size = New System.Drawing.Size(0, 13)
+        Me.lblProgress.TabIndex = 16
         '
         'frmReports
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(374, 168)
-        Me.Controls.Add(Me.CheckBox12)
-        Me.Controls.Add(Me.CheckBox8)
-        Me.Controls.Add(Me.CheckBox4)
+        Me.ClientSize = New System.Drawing.Size(523, 237)
+        Me.Controls.Add(Me.lblProgress)
+        Me.Controls.Add(Me.btnSubmit)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.txtEmail)
+        Me.Controls.Add(Me.chkDRYearly)
+        Me.Controls.Add(Me.chkIRYearly)
+        Me.Controls.Add(Me.chkSTRYearly)
         Me.Controls.Add(Me.chkSalesReportYearly)
-        Me.Controls.Add(Me.CheckBox11)
-        Me.Controls.Add(Me.CheckBox7)
-        Me.Controls.Add(Me.CheckBox3)
+        Me.Controls.Add(Me.chkDRMonthly)
+        Me.Controls.Add(Me.chkIRMonthly)
+        Me.Controls.Add(Me.chkSTRMonthly)
         Me.Controls.Add(Me.chkSalesReportMonthly)
-        Me.Controls.Add(Me.CheckBox10)
-        Me.Controls.Add(Me.CheckBox6)
-        Me.Controls.Add(Me.CheckBox2)
+        Me.Controls.Add(Me.chkDRWeekly)
+        Me.Controls.Add(Me.chkIRWeekly)
+        Me.Controls.Add(Me.chkSTRWeekly)
         Me.Controls.Add(Me.chkSalesReportWeekly)
-        Me.Controls.Add(Me.CheckBox9)
-        Me.Controls.Add(Me.CheckBox5)
-        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.chkDRDaily)
+        Me.Controls.Add(Me.chkIRDaily)
+        Me.Controls.Add(Me.chkSTRDaily)
         Me.Controls.Add(Me.chkSalesReportDaily)
         Me.Controls.Add(Me.lblCashDepositReport)
         Me.Controls.Add(Me.lblInventoryReport)
@@ -318,16 +364,20 @@ Partial Class frmReports
     Friend WithEvents chkSalesReportWeekly As CheckBox
     Friend WithEvents chkSalesReportMonthly As CheckBox
     Friend WithEvents chkSalesReportYearly As CheckBox
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents CheckBox3 As CheckBox
-    Friend WithEvents CheckBox4 As CheckBox
-    Friend WithEvents CheckBox5 As CheckBox
-    Friend WithEvents CheckBox6 As CheckBox
-    Friend WithEvents CheckBox7 As CheckBox
-    Friend WithEvents CheckBox8 As CheckBox
-    Friend WithEvents CheckBox9 As CheckBox
-    Friend WithEvents CheckBox10 As CheckBox
-    Friend WithEvents CheckBox11 As CheckBox
-    Friend WithEvents CheckBox12 As CheckBox
+    Friend WithEvents chkSTRDaily As CheckBox
+    Friend WithEvents chkSTRWeekly As CheckBox
+    Friend WithEvents chkSTRMonthly As CheckBox
+    Friend WithEvents chkSTRYearly As CheckBox
+    Friend WithEvents chkIRDaily As CheckBox
+    Friend WithEvents chkIRWeekly As CheckBox
+    Friend WithEvents chkIRMonthly As CheckBox
+    Friend WithEvents chkIRYearly As CheckBox
+    Friend WithEvents chkDRDaily As CheckBox
+    Friend WithEvents chkDRWeekly As CheckBox
+    Friend WithEvents chkDRMonthly As CheckBox
+    Friend WithEvents chkDRYearly As CheckBox
+    Friend WithEvents txtEmail As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents btnSubmit As Button
+    Friend WithEvents lblProgress As Label
 End Class
