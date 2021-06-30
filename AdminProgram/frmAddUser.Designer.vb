@@ -46,11 +46,11 @@ Partial Class frmAddUser
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtDescription.BackColor = System.Drawing.Color.White
         Me.txtDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtDescription.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDescription.ForeColor = System.Drawing.Color.DarkGray
+        Me.txtDescription.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDescription.ForeColor = System.Drawing.Color.Black
         Me.txtDescription.Location = New System.Drawing.Point(96, 43)
         Me.txtDescription.Name = "txtDescription"
-        Me.txtDescription.Size = New System.Drawing.Size(486, 21)
+        Me.txtDescription.Size = New System.Drawing.Size(486, 20)
         Me.txtDescription.TabIndex = 2
         '
         'lblDescription
@@ -79,11 +79,11 @@ Partial Class frmAddUser
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtSKU.BackColor = System.Drawing.Color.White
         Me.txtSKU.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtSKU.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSKU.ForeColor = System.Drawing.Color.DarkGray
+        Me.txtSKU.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSKU.ForeColor = System.Drawing.Color.Black
         Me.txtSKU.Location = New System.Drawing.Point(96, 16)
         Me.txtSKU.Name = "txtSKU"
-        Me.txtSKU.Size = New System.Drawing.Size(486, 21)
+        Me.txtSKU.Size = New System.Drawing.Size(486, 20)
         Me.txtSKU.TabIndex = 1
         '
         'btnAdd
