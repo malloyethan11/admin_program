@@ -104,6 +104,14 @@ Public Class frmReports
             mail.To.Add(strTO)
             mail.Subject = strSubject
             mail.Body = strBody
+            ' Add Attachment
+            ' Code from: http://vb.net-informations.com/communications/vb-email-attachment.htm
+            ' Reference for excel: https://www.tutorialspoint.com/vb.net/vb.net_excel_sheet.htm
+            ' Reference for PDF And Easy Report RDLC: https://www.youtube.com/watch?v=HX8hG29s3r8
+            Dim attachment As System.Net.Mail.Attachment
+            attachment = New System.Net.Mail.Attachment("your attachment file")
+            mail.Attachments.Add(attachment)
+
             SmtpServer.Send(mail)
             MsgBox("mail send")
             Return 0
