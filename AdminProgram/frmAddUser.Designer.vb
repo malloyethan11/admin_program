@@ -23,10 +23,10 @@ Partial Class frmAddUser
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAddUser))
-        Me.txtDescription = New System.Windows.Forms.TextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.lblDescription = New System.Windows.Forms.Label()
         Me.lblUserName = New System.Windows.Forms.Label()
-        Me.txtSKU = New System.Windows.Forms.TextBox()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.chkCheckout = New System.Windows.Forms.CheckBox()
@@ -38,20 +38,22 @@ Partial Class frmAddUser
         Me.chkMassPricing = New System.Windows.Forms.CheckBox()
         Me.chkAddVendors = New System.Windows.Forms.CheckBox()
         Me.chkEdiVendors = New System.Windows.Forms.CheckBox()
+        Me.chkPayInPayOut = New System.Windows.Forms.CheckBox()
+        Me.chkDeleteVendors = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
-        'txtDescription
+        'txtPassword
         '
-        Me.txtDescription.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.txtPassword.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtDescription.BackColor = System.Drawing.Color.White
-        Me.txtDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtDescription.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDescription.ForeColor = System.Drawing.Color.Black
-        Me.txtDescription.Location = New System.Drawing.Point(96, 43)
-        Me.txtDescription.Name = "txtDescription"
-        Me.txtDescription.Size = New System.Drawing.Size(486, 20)
-        Me.txtDescription.TabIndex = 2
+        Me.txtPassword.BackColor = System.Drawing.Color.White
+        Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPassword.ForeColor = System.Drawing.Color.Black
+        Me.txtPassword.Location = New System.Drawing.Point(96, 43)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Size = New System.Drawing.Size(486, 20)
+        Me.txtPassword.TabIndex = 2
         '
         'lblDescription
         '
@@ -73,18 +75,18 @@ Partial Class frmAddUser
         Me.lblUserName.Text = "Username:"
         Me.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'txtSKU
+        'txtUsername
         '
-        Me.txtSKU.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.txtUsername.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtSKU.BackColor = System.Drawing.Color.White
-        Me.txtSKU.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtSKU.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSKU.ForeColor = System.Drawing.Color.Black
-        Me.txtSKU.Location = New System.Drawing.Point(96, 16)
-        Me.txtSKU.Name = "txtSKU"
-        Me.txtSKU.Size = New System.Drawing.Size(486, 20)
-        Me.txtSKU.TabIndex = 1
+        Me.txtUsername.BackColor = System.Drawing.Color.White
+        Me.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUsername.ForeColor = System.Drawing.Color.Black
+        Me.txtUsername.Location = New System.Drawing.Point(96, 16)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.Size = New System.Drawing.Size(486, 20)
+        Me.txtUsername.TabIndex = 1
         '
         'btnAdd
         '
@@ -202,6 +204,26 @@ Partial Class frmAddUser
         Me.chkEdiVendors.Text = "Edit vendors"
         Me.chkEdiVendors.UseVisualStyleBackColor = True
         '
+        'chkPayInPayOut
+        '
+        Me.chkPayInPayOut.AutoSize = True
+        Me.chkPayInPayOut.Location = New System.Drawing.Point(431, 93)
+        Me.chkPayInPayOut.Name = "chkPayInPayOut"
+        Me.chkPayInPayOut.Size = New System.Drawing.Size(125, 17)
+        Me.chkPayInPayOut.TabIndex = 5
+        Me.chkPayInPayOut.Text = "Pay-ins and Pay-outs"
+        Me.chkPayInPayOut.UseVisualStyleBackColor = True
+        '
+        'chkDeleteVendors
+        '
+        Me.chkDeleteVendors.AutoSize = True
+        Me.chkDeleteVendors.Location = New System.Drawing.Point(431, 70)
+        Me.chkDeleteVendors.Name = "chkDeleteVendors"
+        Me.chkDeleteVendors.Size = New System.Drawing.Size(98, 17)
+        Me.chkDeleteVendors.TabIndex = 6
+        Me.chkDeleteVendors.Text = "Delete vendors"
+        Me.chkDeleteVendors.UseVisualStyleBackColor = True
+        '
         'frmAddUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -210,17 +232,19 @@ Partial Class frmAddUser
         Me.ClientSize = New System.Drawing.Size(594, 173)
         Me.Controls.Add(Me.chkMassPricing)
         Me.Controls.Add(Me.chkDeleteItems)
+        Me.Controls.Add(Me.chkDeleteVendors)
         Me.Controls.Add(Me.chkEdiVendors)
+        Me.Controls.Add(Me.chkPayInPayOut)
         Me.Controls.Add(Me.chkAddItems)
         Me.Controls.Add(Me.chkAddVendors)
         Me.Controls.Add(Me.chkEditItem)
         Me.Controls.Add(Me.chkReturns)
         Me.Controls.Add(Me.chkCheckout)
-        Me.Controls.Add(Me.txtDescription)
+        Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.lblPermissions)
         Me.Controls.Add(Me.lblDescription)
         Me.Controls.Add(Me.lblUserName)
-        Me.Controls.Add(Me.txtSKU)
+        Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.btnExit)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -230,10 +254,10 @@ Partial Class frmAddUser
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents txtDescription As TextBox
+    Friend WithEvents txtPassword As TextBox
     Friend WithEvents lblDescription As Label
     Friend WithEvents lblUserName As Label
-    Friend WithEvents txtSKU As TextBox
+    Friend WithEvents txtUsername As TextBox
     Friend WithEvents btnAdd As Button
     Friend WithEvents btnExit As Button
     Friend WithEvents chkCheckout As CheckBox
@@ -245,4 +269,6 @@ Partial Class frmAddUser
     Friend WithEvents chkMassPricing As CheckBox
     Friend WithEvents chkAddVendors As CheckBox
     Friend WithEvents chkEdiVendors As CheckBox
+    Friend WithEvents chkPayInPayOut As CheckBox
+    Friend WithEvents chkDeleteVendors As CheckBox
 End Class
