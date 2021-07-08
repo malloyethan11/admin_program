@@ -22,6 +22,7 @@ Partial Class frmAddUser
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAddUser))
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.lblDescription = New System.Windows.Forms.Label()
@@ -40,6 +41,7 @@ Partial Class frmAddUser
         Me.chkEdiVendors = New System.Windows.Forms.CheckBox()
         Me.chkPayInPayOut = New System.Windows.Forms.CheckBox()
         Me.chkDeleteVendors = New System.Windows.Forms.CheckBox()
+        Me.StepAction = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'txtPassword
@@ -224,6 +226,11 @@ Partial Class frmAddUser
         Me.chkDeleteVendors.Text = "Delete vendors"
         Me.chkDeleteVendors.UseVisualStyleBackColor = True
         '
+        'StepAction
+        '
+        Me.StepAction.Enabled = True
+        Me.StepAction.Interval = 1
+        '
         'frmAddUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -271,4 +278,5 @@ Partial Class frmAddUser
     Friend WithEvents chkEdiVendors As CheckBox
     Friend WithEvents chkPayInPayOut As CheckBox
     Friend WithEvents chkDeleteVendors As CheckBox
+    Friend WithEvents StepAction As Timer
 End Class
