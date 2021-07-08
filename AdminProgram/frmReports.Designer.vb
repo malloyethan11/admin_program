@@ -22,6 +22,7 @@ Partial Class frmReports
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmReports))
         Me.btnExit = New System.Windows.Forms.Button()
         Me.lblSalesReport = New System.Windows.Forms.Label()
@@ -48,6 +49,7 @@ Partial Class frmReports
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnSubmit = New System.Windows.Forms.Button()
         Me.lblProgress = New System.Windows.Forms.Label()
+        Me.StepAction = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'btnExit
@@ -55,10 +57,10 @@ Partial Class frmReports
         Me.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnExit.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnExit.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExit.Image = Global.AdminFormsDesign.My.Resources.Resources.Button
-        Me.btnExit.Location = New System.Drawing.Point(89, 184)
+        Me.btnExit.Image = Global.AdminFormsDesign.My.Resources.Resources.ButtonShort
+        Me.btnExit.Location = New System.Drawing.Point(142, 183)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(185, 42)
+        Me.btnExit.Size = New System.Drawing.Size(114, 42)
         Me.btnExit.TabIndex = 9
         Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
@@ -301,10 +303,10 @@ Partial Class frmReports
         Me.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSubmit.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSubmit.Image = Global.AdminFormsDesign.My.Resources.Resources.Button
-        Me.btnSubmit.Location = New System.Drawing.Point(280, 183)
+        Me.btnSubmit.Image = Global.AdminFormsDesign.My.Resources.Resources.ButtonShort
+        Me.btnSubmit.Location = New System.Drawing.Point(266, 183)
         Me.btnSubmit.Name = "btnSubmit"
-        Me.btnSubmit.Size = New System.Drawing.Size(185, 42)
+        Me.btnSubmit.Size = New System.Drawing.Size(114, 42)
         Me.btnSubmit.TabIndex = 15
         Me.btnSubmit.Text = "Add"
         Me.btnSubmit.UseVisualStyleBackColor = True
@@ -316,6 +318,11 @@ Partial Class frmReports
         Me.lblProgress.Name = "lblProgress"
         Me.lblProgress.Size = New System.Drawing.Size(0, 13)
         Me.lblProgress.TabIndex = 16
+        '
+        'StepAction
+        '
+        Me.StepAction.Enabled = True
+        Me.StepAction.Interval = 1
         '
         'frmReports
         '
@@ -380,4 +387,5 @@ Partial Class frmReports
     Friend WithEvents Label1 As Label
     Friend WithEvents btnSubmit As Button
     Friend WithEvents lblProgress As Label
+    Friend WithEvents StepAction As Timer
 End Class

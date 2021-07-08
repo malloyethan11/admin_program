@@ -22,6 +22,7 @@ Partial Class frmUserEditor
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmUserEditor))
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
@@ -39,6 +40,7 @@ Partial Class frmUserEditor
         Me.btnExit = New System.Windows.Forms.Button()
         Me.chkEdiVendors = New System.Windows.Forms.CheckBox()
         Me.chkAddVendors = New System.Windows.Forms.CheckBox()
+        Me.StepAction = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'btnUpdate
@@ -216,6 +218,11 @@ Partial Class frmUserEditor
         Me.chkAddVendors.Text = "Add vendors"
         Me.chkAddVendors.UseVisualStyleBackColor = True
         '
+        'StepAction
+        '
+        Me.StepAction.Enabled = True
+        Me.StepAction.Interval = 1
+        '
         'frmUserEditor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -262,4 +269,5 @@ Partial Class frmUserEditor
     Friend WithEvents btnExit As Button
     Friend WithEvents chkEdiVendors As CheckBox
     Friend WithEvents chkAddVendors As CheckBox
+    Friend WithEvents StepAction As Timer
 End Class
