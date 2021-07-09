@@ -1,4 +1,6 @@
-﻿Public Class frmUserEditor
+﻿Imports System.Data.OleDb
+
+Public Class frmUserEditor
 
     Public intCurrentlyEditingUserPrimaryKey As Integer
 
@@ -22,5 +24,45 @@
 
         OpenFormKillParent(Me, frmUserLookup)
 
+    End Sub
+
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        Try
+            ' Open the DB
+            If OpenDatabaseConnectionSQLServer() = False Then
+
+                ' The database is not open
+                MessageBox.Show(Me, "Database connection error." & vbNewLine &
+                                "The form will now close.",
+                                Me.Text + " Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+                ' Close the form/application
+                Me.Close()
+
+            End If
+            ' Need to get userID Dynamically at the end of this sentance
+            Dim cmdInsert = New OleDbCommand("UPDATE TUsers SET strUsername=?, strPassword=?, blnCheckout=?, blnReturns=?, blnAddItems=?, blnEditItems=?, blnDeleteItems=?, blnMassPricing=?, blnAddVendors=?, blnEditVendors=? WHERE intUserID=" + 1)
+            cmdInsert.CommandType = CommandType.Text
+            cmdInsert.Connection = m_conAdministrator
+            ' Username Password
+            cmdInsert.Parameters.AddWithValue("strUsername", txtSKU.Text)
+            cmdInsert.Parameters.AddWithValue("strPassword", txtDescription.Text)
+            ' Permission
+            cmdInsert.Parameters.AddWithValue("blnCheckout", chkCheckout.Checked)
+            cmdInsert.Parameters.AddWithValue("blnReturns", chkReturns.Checked)
+            cmdInsert.Parameters.AddWithValue("blnAddItems", chkAddItems.Checked)
+            cmdInsert.Parameters.AddWithValue("blnEditItems", chkEditItem.Checked)
+            cmdInsert.Parameters.AddWithValue("blnDeleteItems", CheckBox1.Checked)
+            cmdInsert.Parameters.AddWithValue("blnMassPricing", CheckBox2.Checked)
+            cmdInsert.Parameters.AddWithValue("blnAddVendors", chkAddVendors.Checked)
+            cmdInsert.Parameters.AddWithValue("blnEditVendors", chkEdiVendors.Checked)
+            ' Proceed with the database
+            Dim result = cmdInsert.ExecuteNonQuery()
+            ' If result is one that means a row is added
+            MessageBox.Show(result.ToString + " User Added successfully")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 End Class
