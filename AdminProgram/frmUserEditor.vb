@@ -2,7 +2,7 @@
 
 Public Class frmUserEditor
 
-    Public intCurrentlyEditingUserPrimaryKey As Integer
+    Public intCurrentlyEditingUserPrimaryKey As Integer = -1
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -17,6 +17,48 @@ Public Class frmUserEditor
                 Control.FlatAppearance.MouseDownBackColor = BackColor
             End If
         Next
+
+        If Not intCurrentlyEditingUserPrimaryKey.CompareTo(-1) Then
+            Try
+                ' Open the DB
+                If OpenDatabaseConnectionSQLServer() = False Then
+
+                    ' The database is not open
+                    MessageBox.Show(Me, "Database connection error." & vbNewLine &
+                                    "The form will now close.",
+                                    Me.Text + " Error",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+                    ' Close the form/application
+                    Me.Close()
+
+                End If
+                ' Need to get userID Dynamically at the end of this sentance
+                Dim cmdInsert = New OleDbCommand("SELECT * FROM TUsers WHERE intUserID=" + intCurrentlyEditingUserPrimaryKey.ToString)
+                cmdInsert.CommandType = CommandType.Text
+                cmdInsert.Connection = m_conAdministrator
+                ' Username Password
+                Dim result = cmdInsert.ExecuteReader()
+                result.Read()
+
+                If result.HasRows Then
+                    txtSKU.Text = result.GetString(1)
+                    txtDescription.Text = result.GetString(2)
+                    chkCheckout.Checked = result.GetBoolean(3)
+                    chkReturns.Checked = result.GetBoolean(4)
+                    chkAddItems.Checked = result.GetBoolean(5)
+                    chkEditItem.Checked = result.GetBoolean(6)
+                    CheckBox1.Checked = result.GetBoolean(7)
+                    CheckBox2.Checked = result.GetBoolean(8)
+                    chkAddVendors.Checked = result.GetBoolean(9)
+                    chkEdiVendors.Checked = result.GetBoolean(10)
+                End If
+                ' If result is one that means a row is added
+
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        End If
 
     End Sub
 
@@ -42,7 +84,7 @@ Public Class frmUserEditor
 
             End If
             ' Need to get userID Dynamically at the end of this sentance
-            Dim cmdInsert = New OleDbCommand("UPDATE TUsers SET strUsername=?, strPassword=?, blnCheckout=?, blnReturns=?, blnAddItems=?, blnEditItems=?, blnDeleteItems=?, blnMassPricing=?, blnAddVendors=?, blnEditVendors=? WHERE intUserID=" + 1)
+            Dim cmdInsert = New OleDbCommand("UPDATE TUsers SET strUsername=?, strPassword=?, blnCheckout=?, blnReturns=?, blnAddItems=?, blnEditItems=?, blnDeleteItems=?, blnMassPricing=?, blnAddVendors=?, blnEditVendors=? WHERE intUserID=" + intCurrentlyEditingUserPrimaryKey.ToString)
             cmdInsert.CommandType = CommandType.Text
             cmdInsert.Connection = m_conAdministrator
             ' Username Password
@@ -60,7 +102,7 @@ Public Class frmUserEditor
             ' Proceed with the database
             Dim result = cmdInsert.ExecuteNonQuery()
             ' If result is one that means a row is added
-            MessageBox.Show(result.ToString + " User Added successfully")
+            MessageBox.Show(result.ToString + " User changed successfully")
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
