@@ -22,16 +22,108 @@ Partial Class frmLoadCredentials
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLoadCredentials))
+        Me.lblUsername = New System.Windows.Forms.Label()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
+        Me.lblPassword = New System.Windows.Forms.Label()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.btnLogin = New System.Windows.Forms.Button()
+        Me.StepAction = New System.Windows.Forms.Timer(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
+        '
+        'lblUsername
+        '
+        Me.lblUsername.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.lblUsername.AutoSize = True
+        Me.lblUsername.Location = New System.Drawing.Point(24, 53)
+        Me.lblUsername.Name = "lblUsername"
+        Me.lblUsername.Size = New System.Drawing.Size(58, 13)
+        Me.lblUsername.TabIndex = 22
+        Me.lblUsername.Text = "Username:"
+        '
+        'txtUsername
+        '
+        Me.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.txtUsername.Location = New System.Drawing.Point(82, 50)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.Size = New System.Drawing.Size(200, 20)
+        Me.txtUsername.TabIndex = 18
+        '
+        'lblPassword
+        '
+        Me.lblPassword.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.lblPassword.AutoSize = True
+        Me.lblPassword.Location = New System.Drawing.Point(26, 89)
+        Me.lblPassword.Name = "lblPassword"
+        Me.lblPassword.Size = New System.Drawing.Size(56, 13)
+        Me.lblPassword.TabIndex = 21
+        Me.lblPassword.Text = "Password:"
+        '
+        'txtPassword
+        '
+        Me.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.txtPassword.Location = New System.Drawing.Point(82, 86)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Size = New System.Drawing.Size(200, 20)
+        Me.txtPassword.TabIndex = 19
+        '
+        'btnLogin
+        '
+        Me.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnLogin.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogin.Image = Global.AdminFormsDesign.My.Resources.Resources.Button
+        Me.btnLogin.Location = New System.Drawing.Point(12, 122)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(284, 42)
+        Me.btnLogin.TabIndex = 20
+        Me.btnLogin.Text = "Connect"
+        Me.btnLogin.UseVisualStyleBackColor = True
+        '
+        'StepAction
+        '
+        Me.StepAction.Enabled = True
+        Me.StepAction.Interval = 1
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(39, 11)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(231, 28)
+        Me.Label1.TabIndex = 23
+        Me.Label1.Text = "Enter Database Credentials:"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmLoadCredentials
         '
+        Me.AcceptButton = Me.btnLogin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(120, 12)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(309, 174)
+        Me.Controls.Add(Me.lblUsername)
+        Me.Controls.Add(Me.txtUsername)
+        Me.Controls.Add(Me.lblPassword)
+        Me.Controls.Add(Me.txtPassword)
+        Me.Controls.Add(Me.btnLogin)
+        Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmLoadCredentials"
-        Me.Text = "frmLoadCredentials"
+        Me.Text = "Connection Setup"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
+
+    Friend WithEvents lblUsername As Label
+    Friend WithEvents txtUsername As TextBox
+    Friend WithEvents lblPassword As Label
+    Friend WithEvents txtPassword As TextBox
+    Friend WithEvents btnLogin As Button
+    Friend WithEvents StepAction As Timer
+    Friend WithEvents Label1 As Label
 End Class
