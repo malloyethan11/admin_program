@@ -91,6 +91,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsEcryption.vb" />
     <Compile Include="frmAddUser.Designer.vb">
       <DependentUpon>frmAddUser.vb</DependentUpon>
     </Compile>
