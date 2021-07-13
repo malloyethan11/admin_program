@@ -22,11 +22,13 @@ Partial Class frmUsers
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmUsers))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnAddUser = New System.Windows.Forms.Button()
         Me.btnUserLookup = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.StepAction = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -81,6 +83,11 @@ Partial Class frmUsers
         Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
         '
+        'StepAction
+        '
+        Me.StepAction.Enabled = True
+        Me.StepAction.Interval = 1
+        '
         'frmUsers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -103,4 +110,5 @@ Partial Class frmUsers
     Friend WithEvents btnAddUser As Button
     Friend WithEvents btnUserLookup As Button
     Friend WithEvents btnExit As Button
+    Friend WithEvents StepAction As Timer
 End Class

@@ -22,11 +22,13 @@ Partial Class frmUserLookup
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmUserLookup))
         Me.btnOpen = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.cboUsers = New System.Windows.Forms.ComboBox()
         Me.lblUserName = New System.Windows.Forms.Label()
+        Me.StepAction = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'btnOpen
@@ -76,6 +78,11 @@ Partial Class frmUserLookup
         Me.lblUserName.Text = "Username:"
         Me.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
+        'StepAction
+        '
+        Me.StepAction.Enabled = True
+        Me.StepAction.Interval = 1
+        '
         'frmUserLookup
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -97,4 +104,5 @@ Partial Class frmUserLookup
     Friend WithEvents btnBack As Button
     Friend WithEvents cboUsers As ComboBox
     Friend WithEvents lblUserName As Label
+    Friend WithEvents StepAction As Timer
 End Class

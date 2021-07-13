@@ -1,4 +1,6 @@
 ﻿Imports Microsoft.Office.Interop
+Imports System.Data.OleDb
+Imports System.Net.Mail
 
 Module ModuleCommonUtilities
 
@@ -136,6 +138,67 @@ Module ModuleCommonUtilities
 
         ' Return result
         Return dlgResult
+
+    End Function
+
+    ' Send Mail Function copied from: http://vb.net-informations.com/communications/vb.net_smtp_mail.htm
+    Public Function SendMail(strTO As String, strFrom As String, strSubject As String, strBody As String, strUsername As String, strPassword As String, strAttachmentPath As String)
+        Try
+            Dim SmtpServer As New SmtpClient()
+            Dim mail As New MailMessage()
+
+            ' Add Email ID and Password of gmail account.
+            ' This will be used to send the email from
+            ' In this GMail account one need to  turn on from setting -> Allow less Secure App
+
+            SmtpServer.Port = 587
+            SmtpServer.Host = "smtp.gmail.com"
+            ' Citation start: https://stackoverflow.com/questions/13424096/contact-form-is-not-sending-email-to-my-gmail-acount
+            SmtpServer.EnableSsl = True
+            SmtpServer.DeliveryMethod = SmtpDeliveryMethod.Network
+            SmtpServer.UseDefaultCredentials = False
+            SmtpServer.Credentials = New Net.NetworkCredential(strUsername, strPassword)
+            ' Citation end.
+            mail = New MailMessage()
+            mail.From = New MailAddress(strFrom)
+            mail.To.Add(strTO)
+            mail.Subject = strSubject
+            mail.Body = strBody
+            ' Add Attachment
+            ' Code from: http://vb.net-informations.com/communications/vb-email-attachment.htm
+            ' Reference for excel: https://www.tutorialspoint.com/vb.net/vb.net_excel_sheet.htm
+            ' Reference for PDF And Easy Report RDLC: https://www.youtube.com/watch?v=HX8hG29s3r8
+            Dim attachment As System.Net.Mail.Attachment
+            attachment = New System.Net.Mail.Attachment(strAttachmentPath)
+            mail.Attachments.Add(attachment)
+
+            SmtpServer.Send(mail)
+            MsgBox("mail send")
+            Return 0
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+            Return ex.Message.Length
+        End Try
+    End Function
+
+    Public Sub ButtonColor(ByVal pntPosition As Point, ByRef btnItemLookup As Button, ByVal frmMe As Form, ByVal btmButtonGray As Bitmap, ByVal btmButton As Bitmap, Optional ByVal intUpperOffset As Integer = -9, Optional ByVal intLowerOffset As Integer = -8)
+
+        If (MouseIsHovering(pntPosition, btnItemLookup, frmMe, intUpperOffset, intLowerOffset) And frmMe.ContainsFocus = True) Then
+            btnItemLookup.Image = btmButtonGray
+        Else
+            btnItemLookup.Image = btmButton
+        End If
+
+    End Sub
+
+    Public Function MouseIsHovering(ByVal MousePosition As Point, ByRef ctlControl As Control, ByRef frmForm As Form, Optional ByVal intUpperOffset As Integer = -9, Optional ByVal intLowerOffset As Integer = -8)
+
+        ' This if statement adapted from the Waveslash game launch I made for my latest game: https://gravityhamster.itch.io/waveslash
+        If (MousePosition.X > ctlControl.Left + frmForm.Left And MousePosition.X < ctlControl.Right + frmForm.Left) And (MousePosition.Y > ctlControl.Top + frmForm.Top + ctlControl.Height + intUpperOffset And MousePosition.Y < ctlControl.Bottom + frmForm.Top + ctlControl.Height + intLowerOffset) Then
+            Return True
+        Else
+            Return False
+        End If
 
     End Function
 
