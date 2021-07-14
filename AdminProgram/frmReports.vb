@@ -42,12 +42,12 @@ Public Class frmReports
                 Me.Close()
 
             End If
-            Dim cmdInsert = New OleDbCommand("INSERT INTO TReports(strReportType, blnDaily, blnWeekly, blnMonthly, blnYearly, dtDailyReportDate, dtWeeklyReportDate, dtMonthlyReportDate, dtYearlyReportDate, strTargetEmail) VALUES(?,?,?,?,?,GETDATE(),GETDATE(),GETDATE(),GETDATE(),?)")
+            Dim cmdInsert = New OleDbCommand("UPDATE TReports SET blnDaily=?, blnWeekly=?, blnMonthly=?, blnYearly=?, dtDailyReportDate=GETDATE(), dtWeeklyReportDate=GETDATE(), dtMonthlyReportDate=GETDATE(), dtYearlyReportDate=GETDATE(), strTargetEmail=? WHERE strReportType='" + strReportType + "'")
             cmdInsert.CommandType = CommandType.Text
             cmdInsert.Connection = m_conAdministrator
 
             ' Username Password
-            cmdInsert.Parameters.AddWithValue("strReportType", strReportType)
+            'cmdInsert.Parameters.AddWithValue("strReportType", strReportType)
             ' Time of Report
             cmdInsert.Parameters.AddWithValue("blnDaily", blnDaily)
             cmdInsert.Parameters.AddWithValue("blnWeekly", blnWeekly)
