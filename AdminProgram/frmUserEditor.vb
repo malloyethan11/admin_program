@@ -136,9 +136,6 @@ Public Class frmUserEditor
         End Try
     End Sub
 
-
-    End Sub
-
     Private Sub StepAction_Tick(sender As Object, e As EventArgs) Handles StepAction.Tick
 
         ButtonColor(MousePosition, btnDelete, Me, btmButtonShortGray, btmButtonShort)

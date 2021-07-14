@@ -42,7 +42,8 @@ Public Class frmAddUser
     End Function
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        If Validate() Then
+
+        If Validation() = True Then
             Try
                 ' Open the DB
                 If OpenDatabaseConnectionSQLServer() = False Then
@@ -61,8 +62,8 @@ Public Class frmAddUser
                 cmdInsert.CommandType = CommandType.Text
                 cmdInsert.Connection = m_conAdministrator
                 ' Username Password
-                cmdInsert.Parameters.AddWithValue("strUsername", txtSKU.Text)
-                cmdInsert.Parameters.AddWithValue("strPassword", txtDescription.Text)
+                cmdInsert.Parameters.AddWithValue("strUsername", txtUsername.Text)
+                cmdInsert.Parameters.AddWithValue("strPassword", txtPassword.Text)
                 ' Permission
                 cmdInsert.Parameters.AddWithValue("blnCheckout", chkCheckout.Checked)
                 cmdInsert.Parameters.AddWithValue("blnReturns", chkReturns.Checked)
