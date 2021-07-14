@@ -17,3 +17,22 @@ D:\College Homework\CAPSTONE\AdminFormsDesign\AdminProgram\obj\Debug\AdminProgra
 D:\College Homework\CAPSTONE\AdminFormsDesign\AdminProgram\obj\Debug\AdminFormsDesign.exe
 D:\College Homework\CAPSTONE\AdminFormsDesign\AdminProgram\obj\Debug\AdminFormsDesign.xml
 D:\College Homework\CAPSTONE\AdminFormsDesign\AdminProgram\obj\Debug\AdminFormsDesign.pdb
+C:\Users\Nikhil\Documents\repo\admin_program\AdminProgram\obj\Debug\AdminProgram.vbproj.AssemblyReference.cache
+C:\Users\Nikhil\Documents\repo\admin_program\AdminProgram\obj\Debug\AdminProgram.vbproj.ResolveComReference.cache
+C:\Users\Nikhil\Documents\repo\admin_program\AdminProgram\obj\Debug\AdminFormsDesign.frmAddUser.resources
+C:\Users\Nikhil\Documents\repo\admin_program\AdminProgram\obj\Debug\AdminFormsDesign.frmLoadCredentials.resources
+C:\Users\Nikhil\Documents\repo\admin_program\AdminProgram\obj\Debug\AdminFormsDesign.frmUsers.resources
+C:\Users\Nikhil\Documents\repo\admin_program\AdminProgram\obj\Debug\AdminFormsDesign.frmUserEditor.resources
+C:\Users\Nikhil\Documents\repo\admin_program\AdminProgram\obj\Debug\AdminFormsDesign.frmMain.resources
+C:\Users\Nikhil\Documents\repo\admin_program\AdminProgram\obj\Debug\AdminFormsDesign.frmUserLookup.resources
+C:\Users\Nikhil\Documents\repo\admin_program\AdminProgram\obj\Debug\AdminFormsDesign.frmReports.resources
+C:\Users\Nikhil\Documents\repo\admin_program\AdminProgram\obj\Debug\AdminFormsDesign.Resources.resources
+C:\Users\Nikhil\Documents\repo\admin_program\AdminProgram\obj\Debug\AdminProgram.vbproj.GenerateResource.cache
+C:\Users\Nikhil\Documents\repo\admin_program\AdminProgram\obj\Debug\AdminProgram.vbproj.CoreCompileInputs.cache
+C:\Users\Nikhil\Documents\repo\admin_program\AdminProgram\obj\Debug\AdminFormsDesign.exe
+C:\Users\Nikhil\Documents\repo\admin_program\AdminProgram\obj\Debug\AdminFormsDesign.xml
+C:\Users\Nikhil\Documents\repo\admin_program\AdminProgram\obj\Debug\AdminFormsDesign.pdb
+C:\Users\Nikhil\Documents\repo\admin_program\AdminProgram\bin\Debug\AdminFormsDesign.exe.config
+C:\Users\Nikhil\Documents\repo\admin_program\AdminProgram\bin\Debug\AdminFormsDesign.exe
+C:\Users\Nikhil\Documents\repo\admin_program\AdminProgram\bin\Debug\AdminFormsDesign.pdb
+C:\Users\Nikhil\Documents\repo\admin_program\AdminProgram\bin\Debug\AdminFormsDesign.xml

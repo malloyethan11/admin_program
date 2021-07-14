@@ -62,26 +62,48 @@ Public Class frmReports
         Return 0
     End Function
 
-    Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
-        Try
-            Dim result As Integer = 0
-            lblProgress.Text = "Initializing"
-            lblProgress.Text = "Adding Sales Report"
-            result += toDB("Sales Report", chkSalesReportDaily.Checked, chkSalesReportWeekly.Checked, chkSalesReportMonthly.Checked, chkSalesReportYearly.Checked, txtEmail1.Text)
-            lblProgress.Text = "Adding Tax Report"
-            result += toDB("Tax Report", chkSTRDaily.Checked, chkSTRWeekly.Checked, chkSTRMonthly.Checked, chkSTRYearly.Checked, txtEmail2.Text)
-            lblProgress.Text = "Adding Inventory Report"
-            result += toDB("Inventory Report", chkIRDaily.Checked, chkIRWeekly.Checked, chkDRMonthly.Checked, chkDRYearly.Checked, txtEmail3.Text)
-            lblProgress.Text = "Adding Deposit Report"
-            result += toDB("Deposit Report", chkDRDaily.Checked, chkDRWeekly.Checked, chkDRMonthly.Checked, chkDRYearly.Checked, txtEmail4.Text)
-            'lblProgress.Text = "Sending Mail"
-            lblProgress.Text = ""
 
-            MessageBox.Show(result.ToString + " Reports Added successfully")
-        Catch ex As Exception
-            lblProgress.Text = ""
-            MessageBox.Show(ex.Message)
-        End Try
+    Public Function Validation() As Boolean
+
+        ' loop through the textboxes and clear them in case they have data in them after a delete
+        For Each cntrl As Control In Controls
+            If TypeOf cntrl Is TextBox Then
+                cntrl.BackColor = Color.White
+                If cntrl.Text = String.Empty Then
+                    cntrl.BackColor = Color.Yellow
+                    cntrl.Focus()
+                    Return False
+                End If
+            End If
+        Next
+
+        'every this is good so return true
+        Return True
+
+    End Function
+
+    Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
+        If Validation() Then
+            Try
+                Dim result As Integer = 0
+                lblProgress.Text = "Initializing"
+                lblProgress.Text = "Adding Sales Report"
+                result += toDB("Sales Report", chkSalesReportDaily.Checked, chkSalesReportWeekly.Checked, chkSalesReportMonthly.Checked, chkSalesReportYearly.Checked, txtEmail1.Text)
+                lblProgress.Text = "Adding Tax Report"
+                result += toDB("Tax Report", chkSTRDaily.Checked, chkSTRWeekly.Checked, chkSTRMonthly.Checked, chkSTRYearly.Checked, txtEmail2.Text)
+                lblProgress.Text = "Adding Inventory Report"
+                result += toDB("Inventory Report", chkIRDaily.Checked, chkIRWeekly.Checked, chkDRMonthly.Checked, chkDRYearly.Checked, txtEmail3.Text)
+                lblProgress.Text = "Adding Deposit Report"
+                result += toDB("Deposit Report", chkDRDaily.Checked, chkDRWeekly.Checked, chkDRMonthly.Checked, chkDRYearly.Checked, txtEmail4.Text)
+                'lblProgress.Text = "Sending Mail"
+                lblProgress.Text = ""
+
+                MessageBox.Show(result.ToString + " Reports Added successfully")
+            Catch ex As Exception
+                lblProgress.Text = ""
+                MessageBox.Show(ex.Message)
+            End Try
+        End If
     End Sub
 
     Private Sub StepAction_Tick(sender As Object, e As EventArgs) Handles StepAction.Tick
