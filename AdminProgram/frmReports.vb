@@ -84,40 +84,10 @@ Public Class frmReports
         End Try
     End Sub
 
+    Private Sub StepAction_Tick(sender As Object, e As EventArgs) Handles StepAction.Tick
 
-    ' Send Mail Function copied from: http://vb.net-informations.com/communications/vb.net_smtp_mail.htm
-    Private Function SendMail(strTO As String, strFrom As String, strSubject As String, strBody As String)
-        Try
-            Dim SmtpServer As New SmtpClient()
-            Dim mail As New MailMessage()
+        ButtonColor(MousePosition, btnSubmit, Me, btmButtonShortGray, btmButtonShort)
+        ButtonColor(MousePosition, btnExit, Me, btmButtonShortGray, btmButtonShort)
 
-            ' Add Email ID and Password of gmail account.
-            ' This will be used to send the email from
-            ' In this GMail account one need to  turn on from setting -> Allow less Secure App
-
-            SmtpServer.Credentials = New _
-        Net.NetworkCredential("username@gmail.com", "password")
-            SmtpServer.Port = 587
-            SmtpServer.Host = "smtp.gmail.com"
-            mail = New MailMessage()
-            mail.From = New MailAddress(strFrom)
-            mail.To.Add(strTO)
-            mail.Subject = strSubject
-            mail.Body = strBody
-            ' Add Attachment
-            ' Code from: http://vb.net-informations.com/communications/vb-email-attachment.htm
-            ' Reference for excel: https://www.tutorialspoint.com/vb.net/vb.net_excel_sheet.htm
-            ' Reference for PDF And Easy Report RDLC: https://www.youtube.com/watch?v=HX8hG29s3r8
-            Dim attachment As System.Net.Mail.Attachment
-            attachment = New System.Net.Mail.Attachment("your attachment file")
-            mail.Attachments.Add(attachment)
-
-            SmtpServer.Send(mail)
-            MsgBox("mail send")
-            Return 0
-        Catch ex As Exception
-            MsgBox(ex.ToString)
-            Return ex.Message.Length
-        End Try
-    End Function
+    End Sub
 End Class

@@ -14,7 +14,6 @@ Public Class frmAddUser
                 Control.FlatAppearance.MouseDownBackColor = BackColor
             End If
         Next
-
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
@@ -81,5 +80,12 @@ Public Class frmAddUser
                 MessageBox.Show(ex.Message)
             End Try
         End If
+    End Sub
+
+    Private Sub StepAction_Tick(sender As Object, e As EventArgs) Handles StepAction.Tick
+
+        ButtonColor(MousePosition, btnAdd, Me, btmButtonShortGray, btmButtonShort)
+        ButtonColor(MousePosition, btnExit, Me, btmButtonShortGray, btmButtonShort)
+
     End Sub
 End Class

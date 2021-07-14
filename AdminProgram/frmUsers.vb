@@ -36,4 +36,12 @@
         OpenFormKillParent(Me, frmMain)
 
     End Sub
+
+    Private Sub StepAction_Tick(sender As Object, e As EventArgs) Handles StepAction.Tick
+
+        ButtonColor(MousePosition, btnExit, Me, btmButtonDefaultGray, btmButtonDefault)
+        ButtonColor(MousePosition, btnAddUser, Me, btmButtonDefaultGray, btmButtonDefault)
+        ButtonColor(MousePosition, btnUserLookup, Me, btmButtonDefaultGray, btmButtonDefault)
+
+    End Sub
 End Class

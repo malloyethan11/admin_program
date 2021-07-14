@@ -135,4 +135,14 @@ Public Class frmUserEditor
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+
+
+    End Sub
+
+    Private Sub StepAction_Tick(sender As Object, e As EventArgs) Handles StepAction.Tick
+
+        ButtonColor(MousePosition, btnDelete, Me, btmButtonShortGray, btmButtonShort)
+        ButtonColor(MousePosition, btnExit, Me, btmButtonShortGray, btmButtonShort)
+        ButtonColor(MousePosition, btnUpdate, Me, btmButtonDefaultGray, btmButtonDefault)
+    End Sub
 End Class

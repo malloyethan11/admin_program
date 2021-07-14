@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmReports
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,8 +20,9 @@ Partial Class frmReports
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmReports))
         Me.btnExit = New System.Windows.Forms.Button()
         Me.lblSalesReport = New System.Windows.Forms.Label()
@@ -54,6 +55,7 @@ Partial Class frmReports
         Me.txtEmail3 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtEmail4 = New System.Windows.Forms.TextBox()
+        Me.StepAction = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'btnExit
@@ -63,8 +65,10 @@ Partial Class frmReports
         Me.btnExit.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.Image = Global.AdminFormsDesign.My.Resources.Resources.Button
         Me.btnExit.Location = New System.Drawing.Point(145, 184)
+        Me.btnExit.Image = Global.AdminFormsDesign.My.Resources.Resources.ButtonShort
+        Me.btnExit.Location = New System.Drawing.Point(142, 183)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(185, 42)
+        Me.btnExit.Size = New System.Drawing.Size(114, 42)
         Me.btnExit.TabIndex = 9
         Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
@@ -309,8 +313,10 @@ Partial Class frmReports
         Me.btnSubmit.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSubmit.Image = Global.AdminFormsDesign.My.Resources.Resources.Button
         Me.btnSubmit.Location = New System.Drawing.Point(336, 183)
+        Me.btnSubmit.Image = Global.AdminFormsDesign.My.Resources.Resources.ButtonShort
+        Me.btnSubmit.Location = New System.Drawing.Point(266, 183)
         Me.btnSubmit.Name = "btnSubmit"
-        Me.btnSubmit.Size = New System.Drawing.Size(185, 42)
+        Me.btnSubmit.Size = New System.Drawing.Size(114, 42)
         Me.btnSubmit.TabIndex = 15
         Me.btnSubmit.Text = "Add"
         Me.btnSubmit.UseVisualStyleBackColor = True
@@ -373,6 +379,11 @@ Partial Class frmReports
         Me.txtEmail4.Name = "txtEmail4"
         Me.txtEmail4.Size = New System.Drawing.Size(147, 23)
         Me.txtEmail4.TabIndex = 21
+        '
+        'StepAction
+        '
+        Me.StepAction.Enabled = True
+        Me.StepAction.Interval = 1
         '
         'frmReports
         '
@@ -449,4 +460,5 @@ Partial Class frmReports
     Friend WithEvents txtEmail3 As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents txtEmail4 As TextBox
+    Friend WithEvents StepAction As Timer
 End Class
