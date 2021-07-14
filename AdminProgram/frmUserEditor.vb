@@ -107,4 +107,32 @@ Public Class frmUserEditor
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+
+        Try
+            ' Open the DB
+            If OpenDatabaseConnectionSQLServer() = False Then
+
+                ' The database is not open
+                MessageBox.Show(Me, "Database connection error." & vbNewLine &
+                                "The form will now close.",
+                                Me.Text + " Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+                ' Close the form/application
+                Me.Close()
+
+            End If
+            ' Need to get userID Dynamically at the end of this sentance
+            Dim cmdInsert = New OleDbCommand("DELETE FROM TUsers WHERE intUserID=" + intCurrentlyEditingUserPrimaryKey.ToString)
+            cmdInsert.CommandType = CommandType.Text
+            cmdInsert.Connection = m_conAdministrator
+            Dim result = cmdInsert.ExecuteNonQuery()
+            ' If result is one that means a row is added
+            MessageBox.Show(result.ToString + " User deleted successfully")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
 End Class
