@@ -60,13 +60,11 @@ Partial Class frmReports
         '
         'btnExit
         '
-        Me.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnExit.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnExit.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExit.Image = Global.AdminFormsDesign.My.Resources.Resources.Button
-        Me.btnExit.Location = New System.Drawing.Point(145, 184)
         Me.btnExit.Image = Global.AdminFormsDesign.My.Resources.Resources.ButtonShort
-        Me.btnExit.Location = New System.Drawing.Point(142, 183)
+        Me.btnExit.Location = New System.Drawing.Point(12, 122)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(114, 42)
         Me.btnExit.TabIndex = 9
@@ -76,7 +74,7 @@ Partial Class frmReports
         'lblSalesReport
         '
         Me.lblSalesReport.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblSalesReport.Location = New System.Drawing.Point(30, 34)
+        Me.lblSalesReport.Location = New System.Drawing.Point(12, 9)
         Me.lblSalesReport.Name = "lblSalesReport"
         Me.lblSalesReport.Size = New System.Drawing.Size(93, 18)
         Me.lblSalesReport.TabIndex = 11
@@ -86,7 +84,7 @@ Partial Class frmReports
         'lblSalesTaxReport
         '
         Me.lblSalesTaxReport.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblSalesTaxReport.Location = New System.Drawing.Point(30, 61)
+        Me.lblSalesTaxReport.Location = New System.Drawing.Point(12, 36)
         Me.lblSalesTaxReport.Name = "lblSalesTaxReport"
         Me.lblSalesTaxReport.Size = New System.Drawing.Size(93, 18)
         Me.lblSalesTaxReport.TabIndex = 11
@@ -96,7 +94,7 @@ Partial Class frmReports
         'lblInventoryReport
         '
         Me.lblInventoryReport.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblInventoryReport.Location = New System.Drawing.Point(30, 88)
+        Me.lblInventoryReport.Location = New System.Drawing.Point(12, 63)
         Me.lblInventoryReport.Name = "lblInventoryReport"
         Me.lblInventoryReport.Size = New System.Drawing.Size(93, 18)
         Me.lblInventoryReport.TabIndex = 11
@@ -106,7 +104,7 @@ Partial Class frmReports
         'lblCashDepositReport
         '
         Me.lblCashDepositReport.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblCashDepositReport.Location = New System.Drawing.Point(33, 115)
+        Me.lblCashDepositReport.Location = New System.Drawing.Point(15, 90)
         Me.lblCashDepositReport.Name = "lblCashDepositReport"
         Me.lblCashDepositReport.Size = New System.Drawing.Size(90, 18)
         Me.lblCashDepositReport.TabIndex = 11
@@ -117,7 +115,7 @@ Partial Class frmReports
         '
         Me.chkSalesReportDaily.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkSalesReportDaily.AutoSize = True
-        Me.chkSalesReportDaily.Location = New System.Drawing.Point(129, 36)
+        Me.chkSalesReportDaily.Location = New System.Drawing.Point(111, 11)
         Me.chkSalesReportDaily.Name = "chkSalesReportDaily"
         Me.chkSalesReportDaily.Size = New System.Drawing.Size(49, 17)
         Me.chkSalesReportDaily.TabIndex = 12
@@ -128,7 +126,7 @@ Partial Class frmReports
         '
         Me.chkSalesReportWeekly.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkSalesReportWeekly.AutoSize = True
-        Me.chkSalesReportWeekly.Location = New System.Drawing.Point(183, 36)
+        Me.chkSalesReportWeekly.Location = New System.Drawing.Point(165, 11)
         Me.chkSalesReportWeekly.Name = "chkSalesReportWeekly"
         Me.chkSalesReportWeekly.Size = New System.Drawing.Size(62, 17)
         Me.chkSalesReportWeekly.TabIndex = 12
@@ -139,7 +137,7 @@ Partial Class frmReports
         '
         Me.chkSalesReportMonthly.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkSalesReportMonthly.AutoSize = True
-        Me.chkSalesReportMonthly.Location = New System.Drawing.Point(251, 36)
+        Me.chkSalesReportMonthly.Location = New System.Drawing.Point(233, 11)
         Me.chkSalesReportMonthly.Name = "chkSalesReportMonthly"
         Me.chkSalesReportMonthly.Size = New System.Drawing.Size(63, 17)
         Me.chkSalesReportMonthly.TabIndex = 12
@@ -150,7 +148,7 @@ Partial Class frmReports
         '
         Me.chkSalesReportYearly.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkSalesReportYearly.AutoSize = True
-        Me.chkSalesReportYearly.Location = New System.Drawing.Point(320, 36)
+        Me.chkSalesReportYearly.Location = New System.Drawing.Point(302, 11)
         Me.chkSalesReportYearly.Name = "chkSalesReportYearly"
         Me.chkSalesReportYearly.Size = New System.Drawing.Size(55, 17)
         Me.chkSalesReportYearly.TabIndex = 12
@@ -161,7 +159,7 @@ Partial Class frmReports
         '
         Me.chkSTRDaily.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkSTRDaily.AutoSize = True
-        Me.chkSTRDaily.Location = New System.Drawing.Point(129, 63)
+        Me.chkSTRDaily.Location = New System.Drawing.Point(111, 38)
         Me.chkSTRDaily.Name = "chkSTRDaily"
         Me.chkSTRDaily.Size = New System.Drawing.Size(49, 17)
         Me.chkSTRDaily.TabIndex = 12
@@ -172,7 +170,7 @@ Partial Class frmReports
         '
         Me.chkSTRWeekly.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkSTRWeekly.AutoSize = True
-        Me.chkSTRWeekly.Location = New System.Drawing.Point(183, 63)
+        Me.chkSTRWeekly.Location = New System.Drawing.Point(165, 38)
         Me.chkSTRWeekly.Name = "chkSTRWeekly"
         Me.chkSTRWeekly.Size = New System.Drawing.Size(62, 17)
         Me.chkSTRWeekly.TabIndex = 12
@@ -183,7 +181,7 @@ Partial Class frmReports
         '
         Me.chkSTRMonthly.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkSTRMonthly.AutoSize = True
-        Me.chkSTRMonthly.Location = New System.Drawing.Point(251, 63)
+        Me.chkSTRMonthly.Location = New System.Drawing.Point(233, 38)
         Me.chkSTRMonthly.Name = "chkSTRMonthly"
         Me.chkSTRMonthly.Size = New System.Drawing.Size(63, 17)
         Me.chkSTRMonthly.TabIndex = 12
@@ -194,7 +192,7 @@ Partial Class frmReports
         '
         Me.chkSTRYearly.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkSTRYearly.AutoSize = True
-        Me.chkSTRYearly.Location = New System.Drawing.Point(320, 63)
+        Me.chkSTRYearly.Location = New System.Drawing.Point(302, 38)
         Me.chkSTRYearly.Name = "chkSTRYearly"
         Me.chkSTRYearly.Size = New System.Drawing.Size(55, 17)
         Me.chkSTRYearly.TabIndex = 12
@@ -205,7 +203,7 @@ Partial Class frmReports
         '
         Me.chkIRDaily.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkIRDaily.AutoSize = True
-        Me.chkIRDaily.Location = New System.Drawing.Point(129, 90)
+        Me.chkIRDaily.Location = New System.Drawing.Point(111, 65)
         Me.chkIRDaily.Name = "chkIRDaily"
         Me.chkIRDaily.Size = New System.Drawing.Size(49, 17)
         Me.chkIRDaily.TabIndex = 12
@@ -216,7 +214,7 @@ Partial Class frmReports
         '
         Me.chkIRWeekly.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkIRWeekly.AutoSize = True
-        Me.chkIRWeekly.Location = New System.Drawing.Point(183, 90)
+        Me.chkIRWeekly.Location = New System.Drawing.Point(165, 65)
         Me.chkIRWeekly.Name = "chkIRWeekly"
         Me.chkIRWeekly.Size = New System.Drawing.Size(62, 17)
         Me.chkIRWeekly.TabIndex = 12
@@ -227,7 +225,7 @@ Partial Class frmReports
         '
         Me.chkIRMonthly.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkIRMonthly.AutoSize = True
-        Me.chkIRMonthly.Location = New System.Drawing.Point(251, 90)
+        Me.chkIRMonthly.Location = New System.Drawing.Point(233, 65)
         Me.chkIRMonthly.Name = "chkIRMonthly"
         Me.chkIRMonthly.Size = New System.Drawing.Size(63, 17)
         Me.chkIRMonthly.TabIndex = 12
@@ -238,7 +236,7 @@ Partial Class frmReports
         '
         Me.chkIRYearly.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkIRYearly.AutoSize = True
-        Me.chkIRYearly.Location = New System.Drawing.Point(320, 90)
+        Me.chkIRYearly.Location = New System.Drawing.Point(302, 65)
         Me.chkIRYearly.Name = "chkIRYearly"
         Me.chkIRYearly.Size = New System.Drawing.Size(55, 17)
         Me.chkIRYearly.TabIndex = 12
@@ -249,7 +247,7 @@ Partial Class frmReports
         '
         Me.chkDRDaily.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkDRDaily.AutoSize = True
-        Me.chkDRDaily.Location = New System.Drawing.Point(129, 117)
+        Me.chkDRDaily.Location = New System.Drawing.Point(111, 92)
         Me.chkDRDaily.Name = "chkDRDaily"
         Me.chkDRDaily.Size = New System.Drawing.Size(49, 17)
         Me.chkDRDaily.TabIndex = 12
@@ -260,7 +258,7 @@ Partial Class frmReports
         '
         Me.chkDRWeekly.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkDRWeekly.AutoSize = True
-        Me.chkDRWeekly.Location = New System.Drawing.Point(183, 117)
+        Me.chkDRWeekly.Location = New System.Drawing.Point(165, 92)
         Me.chkDRWeekly.Name = "chkDRWeekly"
         Me.chkDRWeekly.Size = New System.Drawing.Size(62, 17)
         Me.chkDRWeekly.TabIndex = 12
@@ -271,7 +269,7 @@ Partial Class frmReports
         '
         Me.chkDRMonthly.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkDRMonthly.AutoSize = True
-        Me.chkDRMonthly.Location = New System.Drawing.Point(251, 117)
+        Me.chkDRMonthly.Location = New System.Drawing.Point(233, 92)
         Me.chkDRMonthly.Name = "chkDRMonthly"
         Me.chkDRMonthly.Size = New System.Drawing.Size(63, 17)
         Me.chkDRMonthly.TabIndex = 12
@@ -282,7 +280,7 @@ Partial Class frmReports
         '
         Me.chkDRYearly.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkDRYearly.AutoSize = True
-        Me.chkDRYearly.Location = New System.Drawing.Point(320, 117)
+        Me.chkDRYearly.Location = New System.Drawing.Point(302, 92)
         Me.chkDRYearly.Name = "chkDRYearly"
         Me.chkDRYearly.Size = New System.Drawing.Size(55, 17)
         Me.chkDRYearly.TabIndex = 12
@@ -291,16 +289,18 @@ Partial Class frmReports
         '
         'txtEmail1
         '
+        Me.txtEmail1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txtEmail1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmail1.Location = New System.Drawing.Point(433, 32)
+        Me.txtEmail1.Location = New System.Drawing.Point(415, 7)
         Me.txtEmail1.Name = "txtEmail1"
         Me.txtEmail1.Size = New System.Drawing.Size(147, 23)
         Me.txtEmail1.TabIndex = 13
         '
         'Label1
         '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(381, 37)
+        Me.Label1.Location = New System.Drawing.Point(363, 12)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(46, 13)
         Me.Label1.TabIndex = 14
@@ -308,17 +308,15 @@ Partial Class frmReports
         '
         'btnSubmit
         '
-        Me.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnSubmit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSubmit.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSubmit.Image = Global.AdminFormsDesign.My.Resources.Resources.Button
-        Me.btnSubmit.Location = New System.Drawing.Point(336, 183)
         Me.btnSubmit.Image = Global.AdminFormsDesign.My.Resources.Resources.ButtonShort
-        Me.btnSubmit.Location = New System.Drawing.Point(266, 183)
+        Me.btnSubmit.Location = New System.Drawing.Point(445, 122)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.Size = New System.Drawing.Size(114, 42)
         Me.btnSubmit.TabIndex = 15
-        Me.btnSubmit.Text = "Add"
+        Me.btnSubmit.Text = "Update"
         Me.btnSubmit.UseVisualStyleBackColor = True
         '
         'lblProgress
@@ -331,8 +329,9 @@ Partial Class frmReports
         '
         'Label2
         '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(381, 64)
+        Me.Label2.Location = New System.Drawing.Point(363, 39)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(46, 13)
         Me.Label2.TabIndex = 18
@@ -340,16 +339,18 @@ Partial Class frmReports
         '
         'txtEmail2
         '
+        Me.txtEmail2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txtEmail2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmail2.Location = New System.Drawing.Point(433, 59)
+        Me.txtEmail2.Location = New System.Drawing.Point(415, 34)
         Me.txtEmail2.Name = "txtEmail2"
         Me.txtEmail2.Size = New System.Drawing.Size(147, 23)
         Me.txtEmail2.TabIndex = 17
         '
         'Label3
         '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(381, 91)
+        Me.Label3.Location = New System.Drawing.Point(363, 66)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(46, 13)
         Me.Label3.TabIndex = 20
@@ -357,16 +358,18 @@ Partial Class frmReports
         '
         'txtEmail3
         '
+        Me.txtEmail3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txtEmail3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmail3.Location = New System.Drawing.Point(433, 86)
+        Me.txtEmail3.Location = New System.Drawing.Point(415, 61)
         Me.txtEmail3.Name = "txtEmail3"
         Me.txtEmail3.Size = New System.Drawing.Size(147, 23)
         Me.txtEmail3.TabIndex = 19
         '
         'Label4
         '
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(381, 118)
+        Me.Label4.Location = New System.Drawing.Point(363, 93)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(46, 13)
         Me.Label4.TabIndex = 22
@@ -374,8 +377,9 @@ Partial Class frmReports
         '
         'txtEmail4
         '
+        Me.txtEmail4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txtEmail4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmail4.Location = New System.Drawing.Point(433, 113)
+        Me.txtEmail4.Location = New System.Drawing.Point(415, 88)
         Me.txtEmail4.Name = "txtEmail4"
         Me.txtEmail4.Size = New System.Drawing.Size(147, 23)
         Me.txtEmail4.TabIndex = 21
@@ -390,7 +394,7 @@ Partial Class frmReports
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(635, 237)
+        Me.ClientSize = New System.Drawing.Size(571, 176)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtEmail4)
         Me.Controls.Add(Me.Label3)

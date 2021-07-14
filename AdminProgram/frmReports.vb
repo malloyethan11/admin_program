@@ -98,7 +98,7 @@ Public Class frmReports
                 'lblProgress.Text = "Sending Mail"
                 lblProgress.Text = ""
 
-                MessageBox.Show(result.ToString + " Reports Added successfully")
+                MessageBox.Show(result.ToString + " reports updated successfully")
             Catch ex As Exception
                 lblProgress.Text = ""
                 MessageBox.Show(ex.Message)
