@@ -41,6 +41,8 @@ Partial Class frmUserEditor
         Me.chkEdiVendors = New System.Windows.Forms.CheckBox()
         Me.chkAddVendors = New System.Windows.Forms.CheckBox()
         Me.StepAction = New System.Windows.Forms.Timer(Me.components)
+        Me.chkDeleteVendors = New System.Windows.Forms.CheckBox()
+        Me.chkPayInPayOut = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'btnUpdate
@@ -223,12 +225,34 @@ Partial Class frmUserEditor
         Me.StepAction.Enabled = True
         Me.StepAction.Interval = 1
         '
+        'chkDeleteVendors
+        '
+        Me.chkDeleteVendors.AutoSize = True
+        Me.chkDeleteVendors.Location = New System.Drawing.Point(431, 70)
+        Me.chkDeleteVendors.Name = "chkDeleteVendors"
+        Me.chkDeleteVendors.Size = New System.Drawing.Size(98, 17)
+        Me.chkDeleteVendors.TabIndex = 108
+        Me.chkDeleteVendors.Text = "Delete vendors"
+        Me.chkDeleteVendors.UseVisualStyleBackColor = True
+        '
+        'chkPayInPayOut
+        '
+        Me.chkPayInPayOut.AutoSize = True
+        Me.chkPayInPayOut.Location = New System.Drawing.Point(431, 93)
+        Me.chkPayInPayOut.Name = "chkPayInPayOut"
+        Me.chkPayInPayOut.Size = New System.Drawing.Size(125, 17)
+        Me.chkPayInPayOut.TabIndex = 107
+        Me.chkPayInPayOut.Text = "Pay-ins and Pay-outs"
+        Me.chkPayInPayOut.UseVisualStyleBackColor = True
+        '
         'frmUserEditor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(594, 173)
+        Me.Controls.Add(Me.chkDeleteVendors)
+        Me.Controls.Add(Me.chkPayInPayOut)
         Me.Controls.Add(Me.chkEdiVendors)
         Me.Controls.Add(Me.chkAddVendors)
         Me.Controls.Add(Me.CheckBox2)
@@ -270,4 +294,6 @@ Partial Class frmUserEditor
     Friend WithEvents chkEdiVendors As CheckBox
     Friend WithEvents chkAddVendors As CheckBox
     Friend WithEvents StepAction As Timer
+    Friend WithEvents chkDeleteVendors As CheckBox
+    Friend WithEvents chkPayInPayOut As CheckBox
 End Class
