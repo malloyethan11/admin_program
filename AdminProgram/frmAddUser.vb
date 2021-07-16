@@ -1,4 +1,5 @@
 ﻿Imports System.Data.OleDb
+Imports System.Data.SqlClient
 
 Public Class frmAddUser
     Private Sub frmAddItem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -42,25 +43,24 @@ Public Class frmAddUser
     End Function
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        Try
+            If Validation() = True Then
+                Dim Connection As New SqlConnection("Server=itd2.cincinnatistate.edu;" &
+                                                      "Database=CPDM-GroupB;" &
+                                                      "User ID=" & strConnectionUsername & ";" &
+                                                      "Password=" & strConnectionPassword & ";")
+                Dim cmdInsert As New SqlCommand
+                ' Dim ms As MemoryStream = New MemoryStream()
 
-        If Validation() = True Then
-            Try
-                ' Open the DB
-                If OpenDatabaseConnectionSQLServer() = False Then
+                'picItemImage.Image.Save(ms, picItemImage.Image.RawFormat)
 
-                    ' The database is not open
-                    MessageBox.Show(Me, "Database connection error." & vbNewLine &
-                                    "The form will now close.",
-                                    Me.Text + " Error",
-                                    MessageBoxButtons.OK, MessageBoxIcon.Error)
+                cmdInsert.Connection = Connection
+                cmdInsert.CommandText = "uspAddUser"
+                cmdInsert.CommandType = CommandType.StoredProcedure
 
-                    ' Close the form/application
-                    Me.Close()
-
-                End If
-                Dim cmdInsert = New OleDbCommand("INSERT INTO TUsers(strUsername, strPassword, blnCheckout, blnReturns, blnAddItems, blnEditItems, blnDeleteItems, blnMassPricing, blnAddVendors, blnEditVendors) VALUES(?,?,?,?,?,?,?,?,?,?)")
-                cmdInsert.CommandType = CommandType.Text
-                cmdInsert.Connection = m_conAdministrator
+                'Dim cmdInsert = New OleDbCommand("INSERT INTO TUsers(strUsername, strPassword, blnCheckout, blnReturns, blnAddItems, blnEditItems, blnDeleteItems, blnMassPricing, blnAddVendors, blnEditVendors) VALUES(?,?,?,?,?,?,?,?,?,?)")
+                'cmdInsert.CommandType = CommandType.Text
+                'cmdInsert.Connection = m_conAdministrator
                 ' Username Password
                 cmdInsert.Parameters.AddWithValue("strUsername", txtUsername.Text)
                 cmdInsert.Parameters.AddWithValue("strPassword", txtPassword.Text)
@@ -73,14 +73,37 @@ Public Class frmAddUser
                 cmdInsert.Parameters.AddWithValue("blnMassPricing", chkMassPricing.Checked)
                 cmdInsert.Parameters.AddWithValue("blnAddVendors", chkAddVendors.Checked)
                 cmdInsert.Parameters.AddWithValue("blnEditVendors", chkEdiVendors.Checked)
+                cmdInsert.Parameters.AddWithValue("blnPayinPayOut", chkPayInPayOut.Checked)
+                cmdInsert.Parameters.AddWithValue("blnDeleteVendors", chkDeleteVendors.Checked)
+
                 ' Proceed with the database
                 Dim result = cmdInsert.ExecuteNonQuery()
                 ' If result is one that means a row is added
                 MessageBox.Show(result.ToString + " User Added successfully")
-            Catch ex As Exception
-                MessageBox.Show(ex.Message)
-            End Try
-        End If
+                Connection.Open()
+
+                ' have to let the user know what happened 
+                If cmdInsert.ExecuteNonQuery() = 1 Then
+                    MessageBox.Show("Insert successful. Item " & txtUsername.Text & " has been added.")
+
+                Else
+                    MessageBox.Show("Insert failed")
+
+                End If
+            End If
+        Catch excError As SqlException
+
+            ' Handle SQL errors
+            MessageBox.Show(excError.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        Catch ex As Exception
+
+            ' Handle General errors
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Close()
+
+        End Try
+
     End Sub
 
     Private Sub StepAction_Tick(sender As Object, e As EventArgs) Handles StepAction.Tick
