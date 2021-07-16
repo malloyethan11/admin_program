@@ -99,6 +99,9 @@ Public Class frmUserEditor
             cmdInsert.Parameters.AddWithValue("blnMassPricing", CheckBox2.Checked)
             cmdInsert.Parameters.AddWithValue("blnAddVendors", chkAddVendors.Checked)
             cmdInsert.Parameters.AddWithValue("blnEditVendors", chkEdiVendors.Checked)
+            cmdInsert.Parameters.AddWithValue("blnPayinPayOut", chkPayInPayOut.Checked)
+            cmdInsert.Parameters.AddWithValue("blnDeleteVendors", chkDeleteVendors.Checked)
+
             ' Proceed with the database
             Dim result = cmdInsert.ExecuteNonQuery()
             ' If result is one that means a row is added

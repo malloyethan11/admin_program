@@ -202,4 +202,25 @@ Module ModuleCommonUtilities
 
     End Function
 
+    ' Made from https://www.vbforums.com/showthread.php?347835-SOLVED-How-to-print-excel-file-form-vb-net
+    ' Other than this we can use ADO.NET for manupulating the data
+    Public Function print(strFile As String) As Integer
+        Dim objProcess As New System.Diagnostics.ProcessStartInfo
+
+        With objProcess
+            .FileName = strFile
+            .WindowStyle = ProcessWindowStyle.Hidden
+            .Verb = "print"
+
+            .CreateNoWindow = True
+            .UseShellExecute = True
+        End With
+        Try
+            System.Diagnostics.Process.Start(objProcess)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            Return -1
+        End Try
+        Return 0
+    End Function
 End Module
