@@ -65,6 +65,8 @@
                 CloseDatabaseConnection()
                 OpenFormKillParent(Me, frmMain)
 
+                SetImages()
+
             End If
 
 
