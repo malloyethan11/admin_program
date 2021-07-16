@@ -52,6 +52,8 @@ Public Class frmUserEditor
                     CheckBox2.Checked = result.GetBoolean(8)
                     chkAddVendors.Checked = result.GetBoolean(9)
                     chkEdiVendors.Checked = result.GetBoolean(10)
+                    chkPayInPayOut.Checked = result.GetBoolean(11)
+                    chkDeleteVendors.Checked = result.GetBoolean(12)
                 End If
                 ' If result is one that means a row is added
 
@@ -84,7 +86,7 @@ Public Class frmUserEditor
 
             End If
             ' Need to get userID Dynamically at the end of this sentance
-            Dim cmdInsert = New OleDbCommand("UPDATE TUsers SET strUsername=?, strPassword=?, blnCheckout=?, blnReturns=?, blnAddItems=?, blnEditItems=?, blnDeleteItems=?, blnMassPricing=?, blnAddVendors=?, blnEditVendors=? WHERE intUserID=" + intCurrentlyEditingUserPrimaryKey.ToString)
+            Dim cmdInsert = New OleDbCommand("UPDATE TUsers SET strUsername=?, strPassword=?, blnCheckout=?, blnReturns=?, blnAddItems=?, blnEditItems=?, blnDeleteItems=?, blnMassPricing=?, blnAddVendors=?, blnEditVendors=?, blnPayInPayOut=?, blnDeleteVendors=? WHERE intUserID=" + intCurrentlyEditingUserPrimaryKey.ToString)
             cmdInsert.CommandType = CommandType.Text
             cmdInsert.Connection = m_conAdministrator
             ' Username Password
@@ -99,7 +101,7 @@ Public Class frmUserEditor
             cmdInsert.Parameters.AddWithValue("blnMassPricing", CheckBox2.Checked)
             cmdInsert.Parameters.AddWithValue("blnAddVendors", chkAddVendors.Checked)
             cmdInsert.Parameters.AddWithValue("blnEditVendors", chkEdiVendors.Checked)
-            cmdInsert.Parameters.AddWithValue("blnPayinPayOut", chkPayInPayOut.Checked)
+            cmdInsert.Parameters.AddWithValue("blnPayInPayOut", chkPayInPayOut.Checked)
             cmdInsert.Parameters.AddWithValue("blnDeleteVendors", chkDeleteVendors.Checked)
 
             ' Proceed with the database
@@ -134,6 +136,9 @@ Public Class frmUserEditor
             Dim result = cmdInsert.ExecuteNonQuery()
             ' If result is one that means a row is added
             MessageBox.Show(result.ToString + " User deleted successfully")
+            ' Success
+            OpenFormKillParent(Me, frmUserLookup)
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try

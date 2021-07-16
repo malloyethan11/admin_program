@@ -76,20 +76,21 @@ Public Class frmAddUser
                 cmdInsert.Parameters.AddWithValue("blnPayinPayOut", chkPayInPayOut.Checked)
                 cmdInsert.Parameters.AddWithValue("blnDeleteVendors", chkDeleteVendors.Checked)
 
-                ' Proceed with the database
-                Dim result = cmdInsert.ExecuteNonQuery()
-                ' If result is one that means a row is added
-                MessageBox.Show(result.ToString + " User Added successfully")
+                ' Connection Open
                 Connection.Open()
 
                 ' have to let the user know what happened 
                 If cmdInsert.ExecuteNonQuery() = 1 Then
-                    MessageBox.Show("Insert successful. Item " & txtUsername.Text & " has been added.")
+                    MessageBox.Show("Insert successful. User " & txtUsername.Text & " has been added.")
 
                 Else
                     MessageBox.Show("Insert failed")
 
                 End If
+
+                ' Close
+                Connection.Close()
+
             End If
         Catch excError As SqlException
 
