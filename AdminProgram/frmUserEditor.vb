@@ -108,6 +108,9 @@ Public Class frmUserEditor
             Dim result = cmdInsert.ExecuteNonQuery()
             ' If result is one that means a row is added
             MessageBox.Show(result.ToString + " User changed successfully")
+
+            CloseDatabaseConnection()
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -138,6 +141,8 @@ Public Class frmUserEditor
             MessageBox.Show(result.ToString + " User deleted successfully")
             ' Success
             OpenFormKillParent(Me, frmUserLookup)
+
+            CloseDatabaseConnection()
 
         Catch ex As Exception
             MessageBox.Show(ex.Message)
