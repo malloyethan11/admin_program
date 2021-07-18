@@ -19,25 +19,68 @@ Public Class frmReports
 
         ' Citation for formatting:
         ' https://stackoverflow.com/questions/93472/datetimepicker-pick-both-date-and-time
-        dtmSalesReport.Format = DateTimePickerFormat.Custom
-        dtmSalesReport.CustomFormat = "dd MMMM yyyy"
-        dtmSalesReportTime.Format = DateTimePickerFormat.Time
-        dtmSalesReportTime.ShowUpDown = True
+        dtmSalesReportTimeDaily.Format = DateTimePickerFormat.Time
+        dtmSalesReportTimeDaily.ShowUpDown = True
+        dtmSalesTaxReportTimeDaily.Format = DateTimePickerFormat.Time
+        dtmSalesTaxReportTimeDaily.ShowUpDown = True
+        dtmDepositTimeDaily.Format = DateTimePickerFormat.Time
+        dtmDepositTimeDaily.ShowUpDown = True
+        dtmInventoryTimeDaily.Format = DateTimePickerFormat.Time
+        dtmInventoryTimeDaily.ShowUpDown = True
 
-        dtmSalesTaxReport.Format = DateTimePickerFormat.Custom
-        dtmSalesTaxReport.CustomFormat = "dd MMMM yyyy"
-        dtmSalesTaxReportTime.Format = DateTimePickerFormat.Time
-        dtmSalesTaxReportTime.ShowUpDown = True
+        dtmSalesReportWeekly.Format = DateTimePickerFormat.Custom
+        dtmSalesReportWeekly.CustomFormat = "dddd"
+        dtmSalesTaxReportWeekly.Format = DateTimePickerFormat.Custom
+        dtmSalesTaxReportWeekly.CustomFormat = "dddd"
+        dtmDepositWeekly.Format = DateTimePickerFormat.Custom
+        dtmDepositWeekly.CustomFormat = "dddd"
+        dtmInventoryWeekly.Format = DateTimePickerFormat.Custom
+        dtmInventoryWeekly.CustomFormat = "dddd"
 
-        dtmDeposit.Format = DateTimePickerFormat.Custom
-        dtmDeposit.CustomFormat = "dd MMMM yyyy"
-        dtmDepositTime.Format = DateTimePickerFormat.Time
-        dtmDepositTime.ShowUpDown = True
+        dtmSalesReportWeeklyTime.Format = DateTimePickerFormat.Time
+        dtmSalesReportWeeklyTime.ShowUpDown = True
+        dtmSalesTaxReportWeeklyTime.Format = DateTimePickerFormat.Time
+        dtmSalesTaxReportWeeklyTime.ShowUpDown = True
+        dtmDepositWeeklyTime.Format = DateTimePickerFormat.Time
+        dtmDepositWeeklyTime.ShowUpDown = True
+        dtmInventoryWeeklyTime.Format = DateTimePickerFormat.Time
+        dtmInventoryWeeklyTime.ShowUpDown = True
 
-        dtmInventory.Format = DateTimePickerFormat.Custom
-        dtmInventory.CustomFormat = "dd MMMM yyyy"
-        dtmInventoryTime.Format = DateTimePickerFormat.Time
-        dtmInventoryTime.ShowUpDown = True
+        dtmSalesReportMonthly.Format = DateTimePickerFormat.Custom
+        dtmSalesReportMonthly.CustomFormat = "dd"
+        dtmSalesTaxReportMonthly.Format = DateTimePickerFormat.Custom
+        dtmSalesTaxReportMonthly.CustomFormat = "dd"
+        dtmDepositMonthly.Format = DateTimePickerFormat.Custom
+        dtmDepositMonthly.CustomFormat = "dd"
+        dtmInventoryMonthly.Format = DateTimePickerFormat.Custom
+        dtmInventoryMonthly.CustomFormat = "dd"
+
+        dtmSalesReportMonthlyTime.Format = DateTimePickerFormat.Time
+        dtmSalesReportMonthlyTime.ShowUpDown = True
+        dtmSalesTaxReportMonthlyTime.Format = DateTimePickerFormat.Time
+        dtmSalesTaxReportMonthlyTime.ShowUpDown = True
+        dtmDepositMonthlyTime.Format = DateTimePickerFormat.Time
+        dtmDepositMonthlyTime.ShowUpDown = True
+        dtmInventoryMonthlyTime.Format = DateTimePickerFormat.Time
+        dtmInventoryMonthlyTime.ShowUpDown = True
+
+        dtmSalesReportYearly.Format = DateTimePickerFormat.Custom
+        dtmSalesReportYearly.CustomFormat = "MM/dd"
+        dtmSalesTaxReportYearly.Format = DateTimePickerFormat.Custom
+        dtmSalesTaxReportYearly.CustomFormat = "MM/dd"
+        dtmDepositYearly.Format = DateTimePickerFormat.Custom
+        dtmDepositYearly.CustomFormat = "MM/dd"
+        dtmInventoryYearly.Format = DateTimePickerFormat.Custom
+        dtmInventoryYearly.CustomFormat = "MM/dd"
+
+        dtmSalesReportYearlyTime.Format = DateTimePickerFormat.Time
+        dtmSalesReportYearlyTime.ShowUpDown = True
+        dtmSalesTaxReportYearlyTime.Format = DateTimePickerFormat.Time
+        dtmSalesTaxReportYearlyTime.ShowUpDown = True
+        dtmDepositYearlyTime.Format = DateTimePickerFormat.Time
+        dtmDepositYearlyTime.ShowUpDown = True
+        dtmInventoryYearlyTime.Format = DateTimePickerFormat.Time
+        dtmInventoryYearlyTime.ShowUpDown = True
 
         ' Get configs
         LoadData()
@@ -50,46 +93,46 @@ Public Class frmReports
 
     End Sub
     Private Function toDB(strReportType As String, blnDaily As Boolean, blnWeekly As Boolean,
-                          blnMonthly As Boolean, blnYearly As Boolean, strTargetEmail As String, dtmDateTime As DateTime) As Integer
+                          blnMonthly As Boolean, blnYearly As Boolean, strTargetEmail As String, dtmDailyDateTime As DateTime, dtmWeeklyDateTime As DateTime, dtmMonthlyDateTime As DateTime, dtmYearlyDateTime As DateTime) As Integer
 
         ' Start of function to add report to database
         'If blnDaily Or blnMonthly Or blnWeekly Or blnYearly Then
         ' Open the DB
         If OpenDatabaseConnectionSQLServer() = False Then
 
-                ' The database is not open
-                MessageBox.Show(Me, "Database connection error." & vbNewLine &
+            ' The database is not open
+            MessageBox.Show(Me, "Database connection error." & vbNewLine &
                                 "The form will now close.",
                                 Me.Text + " Error",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error)
 
-                ' Close the form/application
-                Me.Close()
+            ' Close the form/application
+            Me.Close()
 
-            End If
-            Dim cmdInsert = New OleDbCommand("UPDATE TReports SET blnDaily=?, blnWeekly=?, blnMonthly=?, blnYearly=?, dtDailyReportDate=?, dtWeeklyReportDate=?, dtMonthlyReportDate=?, dtYearlyReportDate=?, strTargetEmail=? WHERE strReportType='" + strReportType + "'")
-            cmdInsert.CommandType = CommandType.Text
-            cmdInsert.Connection = m_conAdministrator
+        End If
+        Dim cmdInsert = New OleDbCommand("UPDATE TReports SET blnDaily=?, blnWeekly=?, blnMonthly=?, blnYearly=?, dtDailyReportDate=?, dtWeeklyReportDate=?, dtMonthlyReportDate=?, dtYearlyReportDate=?, strTargetEmail=? WHERE strReportType='" + strReportType + "'")
+        cmdInsert.CommandType = CommandType.Text
+        cmdInsert.Connection = m_conAdministrator
 
-            ' Username Password
-            'cmdInsert.Parameters.AddWithValue("strReportType", strReportType)
-            ' Time of Report
-            cmdInsert.Parameters.AddWithValue("blnDaily", blnDaily)
-            cmdInsert.Parameters.AddWithValue("blnWeekly", blnWeekly)
-            cmdInsert.Parameters.AddWithValue("blnMonthly", blnMonthly)
-            cmdInsert.Parameters.AddWithValue("blnYearly", blnYearly)
-            ' When
-            cmdInsert.Parameters.AddWithValue("dtDailyReportDate", dtmDateTime)
-            cmdInsert.Parameters.AddWithValue("dtWeeklyReportDate", dtmDateTime)
-            cmdInsert.Parameters.AddWithValue("dtMonthlyReportDate", dtmDateTime)
-            cmdInsert.Parameters.AddWithValue("dtYearlyReportDate", dtmDateTime)
-            cmdInsert.Parameters.AddWithValue("strTargetEmail", strTargetEmail)
-            ' Proceed with the database
-            Dim result = cmdInsert.ExecuteNonQuery()
-            ' If result is one that means a row is added
-            Return result
+        ' Username Password
+        'cmdInsert.Parameters.AddWithValue("strReportType", strReportType)
+        ' Time of Report
+        cmdInsert.Parameters.AddWithValue("blnDaily", blnDaily)
+        cmdInsert.Parameters.AddWithValue("blnWeekly", blnWeekly)
+        cmdInsert.Parameters.AddWithValue("blnMonthly", blnMonthly)
+        cmdInsert.Parameters.AddWithValue("blnYearly", blnYearly)
+        ' When
+        cmdInsert.Parameters.AddWithValue("dtDailyReportDate", dtmDailyDateTime)
+        cmdInsert.Parameters.AddWithValue("dtWeeklyReportDate", dtmWeeklyDateTime)
+        cmdInsert.Parameters.AddWithValue("dtMonthlyReportDate", dtmMonthlyDateTime)
+        cmdInsert.Parameters.AddWithValue("dtYearlyReportDate", dtmYearlyDateTime)
+        cmdInsert.Parameters.AddWithValue("strTargetEmail", strTargetEmail)
+        ' Proceed with the database
+        Dim result = cmdInsert.ExecuteNonQuery()
+        ' If result is one that means a row is added
+        Return result
 
-            CloseDatabaseConnection()
+        CloseDatabaseConnection()
 
         'End If
         Return 0
@@ -121,13 +164,30 @@ Public Class frmReports
                 Dim result As Integer = 0
                 lblProgress.Text = "Initializing"
                 lblProgress.Text = "Adding Sales Report"
-                result += toDB("Sales Report", chkSalesReportDaily.Checked, chkSalesReportWeekly.Checked, chkSalesReportMonthly.Checked, chkSalesReportYearly.Checked, txtEmail1.Text, dtmSalesReport.Value.Date + dtmSalesReportTime.Value.TimeOfDay)
+                result += toDB("Sales Report", chkSalesReportDaily.Checked, chkSalesReportWeekly.Checked, chkSalesReportMonthly.Checked, chkSalesReportYearly.Checked, txtEmail1.Text,
+                               dtmSalesReportTimeDaily.Value.Date + dtmSalesReportTimeDaily.Value.TimeOfDay,
+                               dtmSalesReportWeekly.Value.Date + dtmSalesReportWeeklyTime.Value.TimeOfDay,
+                               dtmSalesReportMonthly.Value.Date + dtmSalesReportMonthlyTime.Value.TimeOfDay,
+                               dtmSalesReportYearly.Value.Date + dtmSalesReportYearlyTime.Value.TimeOfDay)
+
                 lblProgress.Text = "Adding Tax Report"
-                result += toDB("Tax Report", chkSTRDaily.Checked, chkSTRWeekly.Checked, chkSTRMonthly.Checked, chkSTRYearly.Checked, txtEmail2.Text, dtmSalesTaxReport.Value.Date + dtmSalesTaxReportTime.Value.TimeOfDay)
+                result += toDB("Tax Report", chkSTRDaily.Checked, chkSTRWeekly.Checked, chkSTRMonthly.Checked, chkSTRYearly.Checked, txtEmail3.Text,
+                               dtmSalesTaxReportTimeDaily.Value.Date + dtmSalesTaxReportTimeDaily.Value.TimeOfDay,
+                               dtmSalesTaxReportWeekly.Value.Date + dtmSalesTaxReportWeeklyTime.Value.TimeOfDay,
+                               dtmSalesTaxReportMonthly.Value.Date + dtmSalesTaxReportMonthlyTime.Value.TimeOfDay,
+                               dtmSalesTaxReportYearly.Value.Date + dtmSalesTaxReportYearlyTime.Value.TimeOfDay)
                 lblProgress.Text = "Adding Inventory Report"
-                result += toDB("Inventory Report", chkIRDaily.Checked, chkIRWeekly.Checked, chkDRMonthly.Checked, chkDRYearly.Checked, txtEmail3.Text, dtmInventory.Value.Date + dtmInventoryTime.Value.TimeOfDay)
+                result += toDB("Inventory Report", chkIRDaily.Checked, chkIRWeekly.Checked, chkDRMonthly.Checked, chkDRYearly.Checked, txtEmail2.Text,
+                               dtmInventoryTimeDaily.Value.Date + dtmInventoryTimeDaily.Value.TimeOfDay,
+                               dtmInventoryWeekly.Value.Date + dtmInventoryWeeklyTime.Value.TimeOfDay,
+                               dtmInventoryMonthly.Value.Date + dtmInventoryMonthlyTime.Value.TimeOfDay,
+                               dtmInventoryYearly.Value.Date + dtmInventoryYearlyTime.Value.TimeOfDay)
                 lblProgress.Text = "Adding Deposit Report"
-                result += toDB("Deposit Report", chkDRDaily.Checked, chkDRWeekly.Checked, chkDRMonthly.Checked, chkDRYearly.Checked, txtEmail4.Text, dtmDeposit.Value.Date + dtmDepositTime.Value.TimeOfDay)
+                result += toDB("Deposit Report", chkDRDaily.Checked, chkDRWeekly.Checked, chkDRMonthly.Checked, chkDRYearly.Checked, txtEmail4.Text,
+                               dtmDepositTimeDaily.Value.Date + dtmDepositTimeDaily.Value.TimeOfDay,
+                               dtmDepositWeekly.Value.Date + dtmDepositWeeklyTime.Value.TimeOfDay,
+                               dtmDepositMonthly.Value.Date + dtmDepositMonthlyTime.Value.TimeOfDay,
+                               dtmDepositYearly.Value.Date + dtmDepositYearlyTime.Value.TimeOfDay)
                 'lblProgress.Text = "Sending Mail"
                 lblProgress.Text = ""
 
@@ -184,8 +244,8 @@ Public Class frmReports
 
             ' Load
             lblSalesReport.Text = dt(0)("strReportType").ToString
-            lblSalesTaxReport.Text = dt(1)("strReportType").ToString
-            lblInventoryReport.Text = dt(2)("strReportType").ToString
+            lblInventoryReport.Text = dt(1)("strReportType").ToString
+            lblSalesTaxReport.Text = dt(2)("strReportType").ToString
             lblCashDepositReport.Text = dt(3)("strReportType").ToString
 
             txtEmail1.Text = dt(0)("strTargetEmail").ToString
@@ -213,17 +273,37 @@ Public Class frmReports
             chkDRWeekly.Checked = dt(3)("blnWeekly").ToString
             chkDRYearly.Checked = dt(3)("blnYearly").ToString
 
-            dtmSalesReport.Value = Convert.ToDateTime(dt(0)("dtDailyReportDate").ToString())
-            dtmSalesReportTime.Value = Convert.ToDateTime(dt(0)("dtDailyReportDate").ToString())
+            dtmSalesReportTimeDaily.Value = Convert.ToDateTime(dt(0)("dtDailyReportDate").ToString())
+            dtmSalesTaxReportTimeDaily.Value = Convert.ToDateTime(dt(2)("dtDailyReportDate").ToString())
+            dtmInventoryTimeDaily.Value = Convert.ToDateTime(dt(1)("dtDailyReportDate").ToString())
+            dtmDepositTimeDaily.Value = Convert.ToDateTime(dt(3)("dtDailyReportDate").ToString())
 
-            dtmSalesTaxReport.Value = Convert.ToDateTime(dt(1)("dtDailyReportDate").ToString())
-            dtmSalesTaxReportTime.Value = Convert.ToDateTime(dt(1)("dtDailyReportDate").ToString())
+            dtmSalesReportWeekly.Value = Convert.ToDateTime(dt(0)("dtWeeklyReportDate").ToString())
+            dtmSalesTaxReportWeekly.Value = Convert.ToDateTime(dt(2)("dtWeeklyReportDate").ToString())
+            dtmInventoryWeekly.Value = Convert.ToDateTime(dt(1)("dtWeeklyReportDate").ToString())
+            dtmDepositWeekly.Value = Convert.ToDateTime(dt(3)("dtWeeklyReportDate").ToString())
+            dtmSalesReportWeeklyTime.Value = Convert.ToDateTime(dt(0)("dtWeeklyReportDate").ToString())
+            dtmSalesTaxReportWeeklyTime.Value = Convert.ToDateTime(dt(2)("dtWeeklyReportDate").ToString())
+            dtmInventoryWeeklyTime.Value = Convert.ToDateTime(dt(1)("dtWeeklyReportDate").ToString())
+            dtmDepositWeeklyTime.Value = Convert.ToDateTime(dt(3)("dtWeeklyReportDate").ToString())
 
-            dtmInventory.Value = Convert.ToDateTime(dt(2)("dtDailyReportDate").ToString())
-            dtmInventoryTime.Value = Convert.ToDateTime(dt(2)("dtDailyReportDate").ToString())
+            dtmSalesReportMonthly.Value = Convert.ToDateTime(dt(0)("dtMonthlyReportDate").ToString())
+            dtmSalesTaxReportMonthly.Value = Convert.ToDateTime(dt(2)("dtMonthlyReportDate").ToString())
+            dtmInventoryMonthly.Value = Convert.ToDateTime(dt(1)("dtMonthlyReportDate").ToString())
+            dtmDepositMonthly.Value = Convert.ToDateTime(dt(3)("dtMonthlyReportDate").ToString())
+            dtmSalesReportMonthlyTime.Value = Convert.ToDateTime(dt(0)("dtMonthlyReportDate").ToString())
+            dtmSalesTaxReportMonthlyTime.Value = Convert.ToDateTime(dt(2)("dtMonthlyReportDate").ToString())
+            dtmInventoryMonthlyTime.Value = Convert.ToDateTime(dt(1)("dtMonthlyReportDate").ToString())
+            dtmDepositMonthlyTime.Value = Convert.ToDateTime(dt(3)("dtMonthlyReportDate").ToString())
 
-            dtmDeposit.Value = Convert.ToDateTime(dt(3)("dtDailyReportDate").ToString())
-            dtmDepositTime.Value = Convert.ToDateTime(dt(3)("dtDailyReportDate").ToString())
+            dtmSalesReportYearly.Value = Convert.ToDateTime(dt(0)("dtYearlyReportDate").ToString())
+            dtmSalesTaxReportYearly.Value = Convert.ToDateTime(dt(2)("dtYearlyReportDate").ToString())
+            dtmInventoryYearly.Value = Convert.ToDateTime(dt(1)("dtYearlyReportDate").ToString())
+            dtmDepositYearly.Value = Convert.ToDateTime(dt(3)("dtYearlyReportDate").ToString())
+            dtmSalesReportYearlyTime.Value = Convert.ToDateTime(dt(0)("dtYearlyReportDate").ToString())
+            dtmSalesTaxReportYearlyTime.Value = Convert.ToDateTime(dt(2)("dtYearlyReportDate").ToString())
+            dtmInventoryYearlyTime.Value = Convert.ToDateTime(dt(1)("dtYearlyReportDate").ToString())
+            dtmDepositYearlyTime.Value = Convert.ToDateTime(dt(3)("dtYearlyReportDate").ToString())
 
             ' Close the db
             drSourceTable.Close()
@@ -237,5 +317,4 @@ Public Class frmReports
         End Try
 
     End Sub
-
 End Class
