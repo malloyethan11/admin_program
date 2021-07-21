@@ -162,6 +162,12 @@
         strConnectionUsername = txtUsername.Text
         strConnectionPassword = txtPassword.Text
 
+        m_strDatabaseConnectionStringPassword = "Provider=SQLOLEDB;" &
+                                                "Server=itd2.cincinnatistate.edu;" &
+                                                "Database=CPDM-GroupB;" &
+                                                "User ID=" & strConnectionUsername & ";" &
+                                                "Password=" & strConnectionPassword & ";"
+
         ' Start encryption service
         Dim clsEncrypt As New clsEncryption("09b023thboiu3h2rf02p3098t2b03g98uh92oeryugbs0e59y72nb09348tv02934vthm0")
 
