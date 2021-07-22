@@ -177,7 +177,7 @@ Public Class frmReports
                                dtmSalesTaxReportMonthly.Value.Date + dtmSalesTaxReportMonthlyTime.Value.TimeOfDay,
                                dtmSalesTaxReportYearly.Value.Date + dtmSalesTaxReportYearlyTime.Value.TimeOfDay)
                 lblProgress.Text = "Adding Inventory Report"
-                result += toDB("Inventory Report", chkIRDaily.Checked, chkIRWeekly.Checked, chkDRMonthly.Checked, chkDRYearly.Checked, txtEmail2.Text,
+                result += toDB("Inventory Report", chkIRDaily.Checked, chkIRWeekly.Checked, chkIRMonthly.Checked, chkIRYearly.Checked, txtEmail2.Text,
                                dtmInventoryTimeDaily.Value.Date + dtmInventoryTimeDaily.Value.TimeOfDay,
                                dtmInventoryWeekly.Value.Date + dtmInventoryWeeklyTime.Value.TimeOfDay,
                                dtmInventoryMonthly.Value.Date + dtmInventoryMonthlyTime.Value.TimeOfDay,

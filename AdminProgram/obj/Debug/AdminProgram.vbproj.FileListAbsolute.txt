@@ -2,7 +2,6 @@ D:\College Homework\CAPSTONE\AdminFormsDesign\AdminProgram\bin\Debug\AdminFormsD
 D:\College Homework\CAPSTONE\AdminFormsDesign\AdminProgram\bin\Debug\AdminFormsDesign.exe
 D:\College Homework\CAPSTONE\AdminFormsDesign\AdminProgram\bin\Debug\AdminFormsDesign.pdb
 D:\College Homework\CAPSTONE\AdminFormsDesign\AdminProgram\bin\Debug\AdminFormsDesign.xml
-D:\College Homework\CAPSTONE\AdminFormsDesign\AdminProgram\obj\Debug\AdminProgram.vbprojAssemblyReference.cache
 D:\College Homework\CAPSTONE\AdminFormsDesign\AdminProgram\obj\Debug\AdminProgram.vbproj.ResolveComReference.cache
 D:\College Homework\CAPSTONE\AdminFormsDesign\AdminProgram\obj\Debug\AdminFormsDesign.frmAddUser.resources
 D:\College Homework\CAPSTONE\AdminFormsDesign\AdminProgram\obj\Debug\AdminFormsDesign.frmLoadCredentials.resources
