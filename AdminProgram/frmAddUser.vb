@@ -83,6 +83,20 @@ Public Class frmAddUser
                 If cmdInsert.ExecuteNonQuery() = 1 Then
                     MessageBox.Show("Insert successful. User " & txtUsername.Text & " has been added.")
 
+                    ' Clear the inputs
+                    txtPassword.ResetText()
+                    txtUsername.ResetText()
+                    chkAddItems.Checked = False
+                    chkAddVendors.Checked = False
+                    chkCheckout.Checked = False
+                    chkDeleteItems.Checked = False
+                    chkDeleteVendors.Checked = False
+                    chkEditItem.Checked = False
+                    chkMassPricing.Checked = False
+                    chkEdiVendors.Checked = False
+                    chkPayInPayOut.Checked = False
+                    chkReturns.Checked = False
+
                 Else
                     MessageBox.Show("Insert failed")
 
