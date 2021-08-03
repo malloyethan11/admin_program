@@ -138,8 +138,9 @@ Public Class frmReports
         Return 0
     End Function
 
-
     Public Function Validation() As Boolean
+
+        Dim blnResult As Boolean = True
 
         ' loop through the textboxes and clear them in case they have data in them after a delete
         For Each cntrl As Control In Controls
@@ -148,13 +149,42 @@ Public Class frmReports
                 If cntrl.Text = String.Empty Then
                     cntrl.BackColor = Color.Yellow
                     cntrl.Focus()
-                    Return False
+                    blnResult = False
                 End If
             End If
         Next
 
+        Dim ValidEmail1 As Boolean = System.Text.RegularExpressions.Regex.IsMatch(txtEmail1.Text, "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$")
+        Dim ValidEmail2 As Boolean = System.Text.RegularExpressions.Regex.IsMatch(txtEmail2.Text, "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$")
+        Dim ValidEmail3 As Boolean = System.Text.RegularExpressions.Regex.IsMatch(txtEmail3.Text, "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$")
+        Dim ValidEmail4 As Boolean = System.Text.RegularExpressions.Regex.IsMatch(txtEmail4.Text, "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$")
+
+
+        If (ValidEmail1 = False) Then
+            MessageBox.Show("Please enter a valid email address.") 'pop a message box if an error
+            txtEmail1.BackColor = Color.Yellow
+            txtEmail1.Focus()
+            blnResult = False
+        ElseIf (ValidEmail2 = False) Then
+            MessageBox.Show("Please enter a valid email address.") 'pop a message box if an error
+            txtEmail2.BackColor = Color.Yellow
+            txtEmail2.Focus()
+            blnResult = False
+        ElseIf (ValidEmail3 = False) Then
+            MessageBox.Show("Please enter a valid email address.") 'pop a message box if an error
+            txtEmail3.BackColor = Color.Yellow
+            txtEmail3.Focus()
+            blnResult = False
+        ElseIf (ValidEmail4 = False) Then
+            MessageBox.Show("Please enter a valid email address.") 'pop a message box if an error
+            txtEmail4.BackColor = Color.Yellow
+            txtEmail4.Focus()
+            blnResult = False
+        End If
+
+
         'every this is good so return true
-        Return True
+        Return blnResult
 
     End Function
 
