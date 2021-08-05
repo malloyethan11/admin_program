@@ -40,7 +40,7 @@ Partial Class frmUserLookup
         Me.btnOpen.Location = New System.Drawing.Point(268, 36)
         Me.btnOpen.Name = "btnOpen"
         Me.btnOpen.Size = New System.Drawing.Size(113, 42)
-        Me.btnOpen.TabIndex = 21
+        Me.btnOpen.TabIndex = 3
         Me.btnOpen.Text = "Open"
         Me.btnOpen.UseVisualStyleBackColor = True
         '
@@ -53,7 +53,7 @@ Partial Class frmUserLookup
         Me.btnBack.Location = New System.Drawing.Point(10, 36)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(113, 42)
-        Me.btnBack.TabIndex = 20
+        Me.btnBack.TabIndex = 2
         Me.btnBack.Text = "Back"
         Me.btnBack.UseVisualStyleBackColor = True
         '
@@ -63,6 +63,7 @@ Partial Class frmUserLookup
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cboUsers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboUsers.FormattingEnabled = True
+        Me.cboUsers.ItemHeight = 13
         Me.cboUsers.Location = New System.Drawing.Point(86, 10)
         Me.cboUsers.Name = "cboUsers"
         Me.cboUsers.Size = New System.Drawing.Size(291, 21)

@@ -53,7 +53,7 @@ Partial Class frmMain
         Me.btnUsers.Location = New System.Drawing.Point(266, 280)
         Me.btnUsers.Name = "btnUsers"
         Me.btnUsers.Size = New System.Drawing.Size(284, 42)
-        Me.btnUsers.TabIndex = 3
+        Me.btnUsers.TabIndex = 1
         Me.btnUsers.Text = "Users"
         Me.btnUsers.UseVisualStyleBackColor = True
         '
@@ -66,7 +66,7 @@ Partial Class frmMain
         Me.btnReports.Location = New System.Drawing.Point(266, 328)
         Me.btnReports.Name = "btnReports"
         Me.btnReports.Size = New System.Drawing.Size(284, 42)
-        Me.btnReports.TabIndex = 1
+        Me.btnReports.TabIndex = 2
         Me.btnReports.Text = "Reports"
         Me.btnReports.UseVisualStyleBackColor = True
         '
@@ -79,7 +79,7 @@ Partial Class frmMain
         Me.btnExit.Location = New System.Drawing.Point(266, 376)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(284, 42)
-        Me.btnExit.TabIndex = 0
+        Me.btnExit.TabIndex = 3
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
