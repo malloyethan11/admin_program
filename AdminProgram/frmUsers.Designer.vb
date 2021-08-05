@@ -53,7 +53,7 @@ Partial Class frmUsers
         Me.btnAddUser.Location = New System.Drawing.Point(266, 328)
         Me.btnAddUser.Name = "btnAddUser"
         Me.btnAddUser.Size = New System.Drawing.Size(284, 42)
-        Me.btnAddUser.TabIndex = 7
+        Me.btnAddUser.TabIndex = 2
         Me.btnAddUser.Text = "Add User"
         Me.btnAddUser.UseVisualStyleBackColor = True
         '
@@ -66,7 +66,7 @@ Partial Class frmUsers
         Me.btnUserLookup.Location = New System.Drawing.Point(266, 280)
         Me.btnUserLookup.Name = "btnUserLookup"
         Me.btnUserLookup.Size = New System.Drawing.Size(284, 42)
-        Me.btnUserLookup.TabIndex = 6
+        Me.btnUserLookup.TabIndex = 1
         Me.btnUserLookup.Text = "User Lookup"
         Me.btnUserLookup.UseVisualStyleBackColor = True
         '
@@ -79,7 +79,7 @@ Partial Class frmUsers
         Me.btnExit.Location = New System.Drawing.Point(266, 376)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(284, 42)
-        Me.btnExit.TabIndex = 5
+        Me.btnExit.TabIndex = 3
         Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
         '

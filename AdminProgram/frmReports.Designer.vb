@@ -111,7 +111,7 @@ Partial Class frmReports
         Me.btnExit.Location = New System.Drawing.Point(12, 122)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(114, 42)
-        Me.btnExit.TabIndex = 9
+        Me.btnExit.TabIndex = 50
         Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -157,7 +157,7 @@ Partial Class frmReports
         Me.chkSalesReportDaily.Location = New System.Drawing.Point(111, 12)
         Me.chkSalesReportDaily.Name = "chkSalesReportDaily"
         Me.chkSalesReportDaily.Size = New System.Drawing.Size(49, 17)
-        Me.chkSalesReportDaily.TabIndex = 12
+        Me.chkSalesReportDaily.TabIndex = 1
         Me.chkSalesReportDaily.Text = "Daily"
         Me.chkSalesReportDaily.UseVisualStyleBackColor = True
         '
@@ -167,7 +167,7 @@ Partial Class frmReports
         Me.chkSalesReportWeekly.Location = New System.Drawing.Point(165, 12)
         Me.chkSalesReportWeekly.Name = "chkSalesReportWeekly"
         Me.chkSalesReportWeekly.Size = New System.Drawing.Size(62, 17)
-        Me.chkSalesReportWeekly.TabIndex = 12
+        Me.chkSalesReportWeekly.TabIndex = 2
         Me.chkSalesReportWeekly.Text = "Weekly"
         Me.chkSalesReportWeekly.UseVisualStyleBackColor = True
         '
@@ -177,7 +177,7 @@ Partial Class frmReports
         Me.chkSalesReportMonthly.Location = New System.Drawing.Point(233, 12)
         Me.chkSalesReportMonthly.Name = "chkSalesReportMonthly"
         Me.chkSalesReportMonthly.Size = New System.Drawing.Size(63, 17)
-        Me.chkSalesReportMonthly.TabIndex = 12
+        Me.chkSalesReportMonthly.TabIndex = 3
         Me.chkSalesReportMonthly.Text = "Monthly"
         Me.chkSalesReportMonthly.UseVisualStyleBackColor = True
         '
@@ -187,7 +187,7 @@ Partial Class frmReports
         Me.chkSalesReportYearly.Location = New System.Drawing.Point(302, 12)
         Me.chkSalesReportYearly.Name = "chkSalesReportYearly"
         Me.chkSalesReportYearly.Size = New System.Drawing.Size(55, 17)
-        Me.chkSalesReportYearly.TabIndex = 12
+        Me.chkSalesReportYearly.TabIndex = 4
         Me.chkSalesReportYearly.Text = "Yearly"
         Me.chkSalesReportYearly.UseVisualStyleBackColor = True
         '
@@ -197,7 +197,7 @@ Partial Class frmReports
         Me.chkSTRDaily.Location = New System.Drawing.Point(111, 66)
         Me.chkSTRDaily.Name = "chkSTRDaily"
         Me.chkSTRDaily.Size = New System.Drawing.Size(49, 17)
-        Me.chkSTRDaily.TabIndex = 12
+        Me.chkSTRDaily.TabIndex = 25
         Me.chkSTRDaily.Text = "Daily"
         Me.chkSTRDaily.UseVisualStyleBackColor = True
         '
@@ -207,7 +207,7 @@ Partial Class frmReports
         Me.chkSTRWeekly.Location = New System.Drawing.Point(165, 66)
         Me.chkSTRWeekly.Name = "chkSTRWeekly"
         Me.chkSTRWeekly.Size = New System.Drawing.Size(62, 17)
-        Me.chkSTRWeekly.TabIndex = 12
+        Me.chkSTRWeekly.TabIndex = 26
         Me.chkSTRWeekly.Text = "Weekly"
         Me.chkSTRWeekly.UseVisualStyleBackColor = True
         '
@@ -217,7 +217,7 @@ Partial Class frmReports
         Me.chkSTRMonthly.Location = New System.Drawing.Point(233, 66)
         Me.chkSTRMonthly.Name = "chkSTRMonthly"
         Me.chkSTRMonthly.Size = New System.Drawing.Size(63, 17)
-        Me.chkSTRMonthly.TabIndex = 12
+        Me.chkSTRMonthly.TabIndex = 27
         Me.chkSTRMonthly.Text = "Monthly"
         Me.chkSTRMonthly.UseVisualStyleBackColor = True
         '
@@ -227,7 +227,7 @@ Partial Class frmReports
         Me.chkSTRYearly.Location = New System.Drawing.Point(302, 66)
         Me.chkSTRYearly.Name = "chkSTRYearly"
         Me.chkSTRYearly.Size = New System.Drawing.Size(55, 17)
-        Me.chkSTRYearly.TabIndex = 12
+        Me.chkSTRYearly.TabIndex = 28
         Me.chkSTRYearly.Text = "Yearly"
         Me.chkSTRYearly.UseVisualStyleBackColor = True
         '
@@ -237,7 +237,7 @@ Partial Class frmReports
         Me.chkIRDaily.Location = New System.Drawing.Point(111, 39)
         Me.chkIRDaily.Name = "chkIRDaily"
         Me.chkIRDaily.Size = New System.Drawing.Size(49, 17)
-        Me.chkIRDaily.TabIndex = 12
+        Me.chkIRDaily.TabIndex = 13
         Me.chkIRDaily.Text = "Daily"
         Me.chkIRDaily.UseVisualStyleBackColor = True
         '
@@ -247,7 +247,7 @@ Partial Class frmReports
         Me.chkIRWeekly.Location = New System.Drawing.Point(165, 39)
         Me.chkIRWeekly.Name = "chkIRWeekly"
         Me.chkIRWeekly.Size = New System.Drawing.Size(62, 17)
-        Me.chkIRWeekly.TabIndex = 12
+        Me.chkIRWeekly.TabIndex = 14
         Me.chkIRWeekly.Text = "Weekly"
         Me.chkIRWeekly.UseVisualStyleBackColor = True
         '
@@ -257,7 +257,7 @@ Partial Class frmReports
         Me.chkIRMonthly.Location = New System.Drawing.Point(233, 39)
         Me.chkIRMonthly.Name = "chkIRMonthly"
         Me.chkIRMonthly.Size = New System.Drawing.Size(63, 17)
-        Me.chkIRMonthly.TabIndex = 12
+        Me.chkIRMonthly.TabIndex = 15
         Me.chkIRMonthly.Text = "Monthly"
         Me.chkIRMonthly.UseVisualStyleBackColor = True
         '
@@ -267,7 +267,7 @@ Partial Class frmReports
         Me.chkIRYearly.Location = New System.Drawing.Point(302, 39)
         Me.chkIRYearly.Name = "chkIRYearly"
         Me.chkIRYearly.Size = New System.Drawing.Size(55, 17)
-        Me.chkIRYearly.TabIndex = 12
+        Me.chkIRYearly.TabIndex = 16
         Me.chkIRYearly.Text = "Yearly"
         Me.chkIRYearly.UseVisualStyleBackColor = True
         '
@@ -277,7 +277,7 @@ Partial Class frmReports
         Me.chkDRDaily.Location = New System.Drawing.Point(111, 93)
         Me.chkDRDaily.Name = "chkDRDaily"
         Me.chkDRDaily.Size = New System.Drawing.Size(49, 17)
-        Me.chkDRDaily.TabIndex = 12
+        Me.chkDRDaily.TabIndex = 37
         Me.chkDRDaily.Text = "Daily"
         Me.chkDRDaily.UseVisualStyleBackColor = True
         '
@@ -287,7 +287,7 @@ Partial Class frmReports
         Me.chkDRWeekly.Location = New System.Drawing.Point(165, 93)
         Me.chkDRWeekly.Name = "chkDRWeekly"
         Me.chkDRWeekly.Size = New System.Drawing.Size(62, 17)
-        Me.chkDRWeekly.TabIndex = 12
+        Me.chkDRWeekly.TabIndex = 38
         Me.chkDRWeekly.Text = "Weekly"
         Me.chkDRWeekly.UseVisualStyleBackColor = True
         '
@@ -297,7 +297,7 @@ Partial Class frmReports
         Me.chkDRMonthly.Location = New System.Drawing.Point(233, 93)
         Me.chkDRMonthly.Name = "chkDRMonthly"
         Me.chkDRMonthly.Size = New System.Drawing.Size(63, 17)
-        Me.chkDRMonthly.TabIndex = 12
+        Me.chkDRMonthly.TabIndex = 39
         Me.chkDRMonthly.Text = "Monthly"
         Me.chkDRMonthly.UseVisualStyleBackColor = True
         '
@@ -307,7 +307,7 @@ Partial Class frmReports
         Me.chkDRYearly.Location = New System.Drawing.Point(302, 93)
         Me.chkDRYearly.Name = "chkDRYearly"
         Me.chkDRYearly.Size = New System.Drawing.Size(55, 17)
-        Me.chkDRYearly.TabIndex = 12
+        Me.chkDRYearly.TabIndex = 40
         Me.chkDRYearly.Text = "Yearly"
         Me.chkDRYearly.UseVisualStyleBackColor = True
         '
@@ -319,7 +319,7 @@ Partial Class frmReports
         Me.txtEmail1.Location = New System.Drawing.Point(1438, 9)
         Me.txtEmail1.Name = "txtEmail1"
         Me.txtEmail1.Size = New System.Drawing.Size(341, 20)
-        Me.txtEmail1.TabIndex = 13
+        Me.txtEmail1.TabIndex = 12
         '
         'Label1
         '
@@ -339,7 +339,7 @@ Partial Class frmReports
         Me.btnSubmit.Location = New System.Drawing.Point(1665, 122)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.Size = New System.Drawing.Size(114, 42)
-        Me.btnSubmit.TabIndex = 15
+        Me.btnSubmit.TabIndex = 51
         Me.btnSubmit.Text = "Update"
         Me.btnSubmit.UseVisualStyleBackColor = True
         '
@@ -368,7 +368,7 @@ Partial Class frmReports
         Me.txtEmail2.Location = New System.Drawing.Point(1438, 36)
         Me.txtEmail2.Name = "txtEmail2"
         Me.txtEmail2.Size = New System.Drawing.Size(341, 20)
-        Me.txtEmail2.TabIndex = 17
+        Me.txtEmail2.TabIndex = 24
         '
         'Label3
         '
@@ -387,7 +387,7 @@ Partial Class frmReports
         Me.txtEmail3.Location = New System.Drawing.Point(1438, 63)
         Me.txtEmail3.Name = "txtEmail3"
         Me.txtEmail3.Size = New System.Drawing.Size(341, 20)
-        Me.txtEmail3.TabIndex = 19
+        Me.txtEmail3.TabIndex = 36
         '
         'Label4
         '
@@ -406,7 +406,7 @@ Partial Class frmReports
         Me.txtEmail4.Location = New System.Drawing.Point(1438, 90)
         Me.txtEmail4.Name = "txtEmail4"
         Me.txtEmail4.Size = New System.Drawing.Size(341, 20)
-        Me.txtEmail4.TabIndex = 21
+        Me.txtEmail4.TabIndex = 48
         '
         'StepAction
         '
@@ -418,49 +418,49 @@ Partial Class frmReports
         Me.dtmSalesReportTimeDaily.Location = New System.Drawing.Point(442, 10)
         Me.dtmSalesReportTimeDaily.Name = "dtmSalesReportTimeDaily"
         Me.dtmSalesReportTimeDaily.Size = New System.Drawing.Size(90, 20)
-        Me.dtmSalesReportTimeDaily.TabIndex = 23
+        Me.dtmSalesReportTimeDaily.TabIndex = 5
         '
         'dtmSalesTaxReportWeekly
         '
         Me.dtmSalesTaxReportWeekly.Location = New System.Drawing.Point(620, 63)
         Me.dtmSalesTaxReportWeekly.Name = "dtmSalesTaxReportWeekly"
         Me.dtmSalesTaxReportWeekly.Size = New System.Drawing.Size(90, 20)
-        Me.dtmSalesTaxReportWeekly.TabIndex = 23
+        Me.dtmSalesTaxReportWeekly.TabIndex = 30
         '
         'dtmSalesTaxReportTimeDaily
         '
         Me.dtmSalesTaxReportTimeDaily.Location = New System.Drawing.Point(442, 63)
         Me.dtmSalesTaxReportTimeDaily.Name = "dtmSalesTaxReportTimeDaily"
         Me.dtmSalesTaxReportTimeDaily.Size = New System.Drawing.Size(90, 20)
-        Me.dtmSalesTaxReportTimeDaily.TabIndex = 23
+        Me.dtmSalesTaxReportTimeDaily.TabIndex = 29
         '
         'dtmInventoryWeekly
         '
         Me.dtmInventoryWeekly.Location = New System.Drawing.Point(620, 36)
         Me.dtmInventoryWeekly.Name = "dtmInventoryWeekly"
         Me.dtmInventoryWeekly.Size = New System.Drawing.Size(90, 20)
-        Me.dtmInventoryWeekly.TabIndex = 23
+        Me.dtmInventoryWeekly.TabIndex = 18
         '
         'dtmInventoryTimeDaily
         '
         Me.dtmInventoryTimeDaily.Location = New System.Drawing.Point(442, 36)
         Me.dtmInventoryTimeDaily.Name = "dtmInventoryTimeDaily"
         Me.dtmInventoryTimeDaily.Size = New System.Drawing.Size(89, 20)
-        Me.dtmInventoryTimeDaily.TabIndex = 23
+        Me.dtmInventoryTimeDaily.TabIndex = 17
         '
         'dtmDepositWeekly
         '
         Me.dtmDepositWeekly.Location = New System.Drawing.Point(620, 91)
         Me.dtmDepositWeekly.Name = "dtmDepositWeekly"
         Me.dtmDepositWeekly.Size = New System.Drawing.Size(90, 20)
-        Me.dtmDepositWeekly.TabIndex = 23
+        Me.dtmDepositWeekly.TabIndex = 42
         '
         'dtmDepositTimeDaily
         '
         Me.dtmDepositTimeDaily.Location = New System.Drawing.Point(442, 91)
         Me.dtmDepositTimeDaily.Name = "dtmDepositTimeDaily"
         Me.dtmDepositTimeDaily.Size = New System.Drawing.Size(90, 20)
-        Me.dtmDepositTimeDaily.TabIndex = 23
+        Me.dtmDepositTimeDaily.TabIndex = 41
         '
         'label5
         '
@@ -476,7 +476,7 @@ Partial Class frmReports
         Me.dtmSalesReportWeekly.Location = New System.Drawing.Point(620, 10)
         Me.dtmSalesReportWeekly.Name = "dtmSalesReportWeekly"
         Me.dtmSalesReportWeekly.Size = New System.Drawing.Size(90, 20)
-        Me.dtmSalesReportWeekly.TabIndex = 23
+        Me.dtmSalesReportWeekly.TabIndex = 6
         '
         'Label6
         '
@@ -519,28 +519,28 @@ Partial Class frmReports
         Me.dtmSalesReportWeeklyTime.Location = New System.Drawing.Point(716, 10)
         Me.dtmSalesReportWeeklyTime.Name = "dtmSalesReportWeeklyTime"
         Me.dtmSalesReportWeeklyTime.Size = New System.Drawing.Size(90, 20)
-        Me.dtmSalesReportWeeklyTime.TabIndex = 23
+        Me.dtmSalesReportWeeklyTime.TabIndex = 7
         '
         'dtmSalesTaxReportWeeklyTime
         '
         Me.dtmSalesTaxReportWeeklyTime.Location = New System.Drawing.Point(716, 63)
         Me.dtmSalesTaxReportWeeklyTime.Name = "dtmSalesTaxReportWeeklyTime"
         Me.dtmSalesTaxReportWeeklyTime.Size = New System.Drawing.Size(90, 20)
-        Me.dtmSalesTaxReportWeeklyTime.TabIndex = 23
+        Me.dtmSalesTaxReportWeeklyTime.TabIndex = 31
         '
         'dtmInventoryWeeklyTime
         '
         Me.dtmInventoryWeeklyTime.Location = New System.Drawing.Point(716, 36)
         Me.dtmInventoryWeeklyTime.Name = "dtmInventoryWeeklyTime"
         Me.dtmInventoryWeeklyTime.Size = New System.Drawing.Size(89, 20)
-        Me.dtmInventoryWeeklyTime.TabIndex = 23
+        Me.dtmInventoryWeeklyTime.TabIndex = 19
         '
         'dtmDepositWeeklyTime
         '
         Me.dtmDepositWeeklyTime.Location = New System.Drawing.Point(716, 91)
         Me.dtmDepositWeeklyTime.Name = "dtmDepositWeeklyTime"
         Me.dtmDepositWeeklyTime.Size = New System.Drawing.Size(90, 20)
-        Me.dtmDepositWeeklyTime.TabIndex = 23
+        Me.dtmDepositWeeklyTime.TabIndex = 43
         '
         'Label10
         '
@@ -610,56 +610,56 @@ Partial Class frmReports
         Me.dtmSalesReportMonthly.Location = New System.Drawing.Point(894, 10)
         Me.dtmSalesReportMonthly.Name = "dtmSalesReportMonthly"
         Me.dtmSalesReportMonthly.Size = New System.Drawing.Size(90, 20)
-        Me.dtmSalesReportMonthly.TabIndex = 23
+        Me.dtmSalesReportMonthly.TabIndex = 8
         '
         'dtmSalesTaxReportMonthly
         '
         Me.dtmSalesTaxReportMonthly.Location = New System.Drawing.Point(894, 63)
         Me.dtmSalesTaxReportMonthly.Name = "dtmSalesTaxReportMonthly"
         Me.dtmSalesTaxReportMonthly.Size = New System.Drawing.Size(90, 20)
-        Me.dtmSalesTaxReportMonthly.TabIndex = 23
+        Me.dtmSalesTaxReportMonthly.TabIndex = 32
         '
         'dtmInventoryMonthly
         '
         Me.dtmInventoryMonthly.Location = New System.Drawing.Point(894, 36)
         Me.dtmInventoryMonthly.Name = "dtmInventoryMonthly"
         Me.dtmInventoryMonthly.Size = New System.Drawing.Size(89, 20)
-        Me.dtmInventoryMonthly.TabIndex = 23
+        Me.dtmInventoryMonthly.TabIndex = 20
         '
         'dtmDepositMonthly
         '
         Me.dtmDepositMonthly.Location = New System.Drawing.Point(894, 91)
         Me.dtmDepositMonthly.Name = "dtmDepositMonthly"
         Me.dtmDepositMonthly.Size = New System.Drawing.Size(90, 20)
-        Me.dtmDepositMonthly.TabIndex = 23
+        Me.dtmDepositMonthly.TabIndex = 44
         '
         'dtmSalesReportMonthlyTime
         '
         Me.dtmSalesReportMonthlyTime.Location = New System.Drawing.Point(990, 10)
         Me.dtmSalesReportMonthlyTime.Name = "dtmSalesReportMonthlyTime"
         Me.dtmSalesReportMonthlyTime.Size = New System.Drawing.Size(90, 20)
-        Me.dtmSalesReportMonthlyTime.TabIndex = 23
+        Me.dtmSalesReportMonthlyTime.TabIndex = 9
         '
         'dtmSalesTaxReportMonthlyTime
         '
         Me.dtmSalesTaxReportMonthlyTime.Location = New System.Drawing.Point(990, 63)
         Me.dtmSalesTaxReportMonthlyTime.Name = "dtmSalesTaxReportMonthlyTime"
         Me.dtmSalesTaxReportMonthlyTime.Size = New System.Drawing.Size(90, 20)
-        Me.dtmSalesTaxReportMonthlyTime.TabIndex = 23
+        Me.dtmSalesTaxReportMonthlyTime.TabIndex = 33
         '
         'dtmInventoryMonthlyTime
         '
         Me.dtmInventoryMonthlyTime.Location = New System.Drawing.Point(990, 36)
         Me.dtmInventoryMonthlyTime.Name = "dtmInventoryMonthlyTime"
         Me.dtmInventoryMonthlyTime.Size = New System.Drawing.Size(89, 20)
-        Me.dtmInventoryMonthlyTime.TabIndex = 23
+        Me.dtmInventoryMonthlyTime.TabIndex = 21
         '
         'dtmDepositMonthlyTime
         '
         Me.dtmDepositMonthlyTime.Location = New System.Drawing.Point(990, 91)
         Me.dtmDepositMonthlyTime.Name = "dtmDepositMonthlyTime"
         Me.dtmDepositMonthlyTime.Size = New System.Drawing.Size(90, 20)
-        Me.dtmDepositMonthlyTime.TabIndex = 23
+        Me.dtmDepositMonthlyTime.TabIndex = 45
         '
         'Label17
         '
@@ -702,42 +702,42 @@ Partial Class frmReports
         Me.dtmSalesReportYearly.Location = New System.Drawing.Point(1168, 10)
         Me.dtmSalesReportYearly.Name = "dtmSalesReportYearly"
         Me.dtmSalesReportYearly.Size = New System.Drawing.Size(90, 20)
-        Me.dtmSalesReportYearly.TabIndex = 23
+        Me.dtmSalesReportYearly.TabIndex = 10
         '
         'dtmSalesTaxReportYearly
         '
         Me.dtmSalesTaxReportYearly.Location = New System.Drawing.Point(1168, 63)
         Me.dtmSalesTaxReportYearly.Name = "dtmSalesTaxReportYearly"
         Me.dtmSalesTaxReportYearly.Size = New System.Drawing.Size(90, 20)
-        Me.dtmSalesTaxReportYearly.TabIndex = 23
+        Me.dtmSalesTaxReportYearly.TabIndex = 34
         '
         'dtmInventoryYearly
         '
         Me.dtmInventoryYearly.Location = New System.Drawing.Point(1168, 36)
         Me.dtmInventoryYearly.Name = "dtmInventoryYearly"
         Me.dtmInventoryYearly.Size = New System.Drawing.Size(90, 20)
-        Me.dtmInventoryYearly.TabIndex = 23
+        Me.dtmInventoryYearly.TabIndex = 22
         '
         'dtmDepositYearly
         '
         Me.dtmDepositYearly.Location = New System.Drawing.Point(1168, 91)
         Me.dtmDepositYearly.Name = "dtmDepositYearly"
         Me.dtmDepositYearly.Size = New System.Drawing.Size(90, 20)
-        Me.dtmDepositYearly.TabIndex = 23
+        Me.dtmDepositYearly.TabIndex = 46
         '
         'dtmSalesReportYearlyTime
         '
         Me.dtmSalesReportYearlyTime.Location = New System.Drawing.Point(1264, 10)
         Me.dtmSalesReportYearlyTime.Name = "dtmSalesReportYearlyTime"
         Me.dtmSalesReportYearlyTime.Size = New System.Drawing.Size(90, 20)
-        Me.dtmSalesReportYearlyTime.TabIndex = 23
+        Me.dtmSalesReportYearlyTime.TabIndex = 11
         '
         'dtmSalesTaxReportYearlyTime
         '
         Me.dtmSalesTaxReportYearlyTime.Location = New System.Drawing.Point(1264, 63)
         Me.dtmSalesTaxReportYearlyTime.Name = "dtmSalesTaxReportYearlyTime"
         Me.dtmSalesTaxReportYearlyTime.Size = New System.Drawing.Size(90, 20)
-        Me.dtmSalesTaxReportYearlyTime.TabIndex = 23
+        Me.dtmSalesTaxReportYearlyTime.TabIndex = 35
         '
         'dtmInventoryYearlyTime
         '
@@ -751,10 +751,11 @@ Partial Class frmReports
         Me.dtmDepositYearlyTime.Location = New System.Drawing.Point(1264, 91)
         Me.dtmDepositYearlyTime.Name = "dtmDepositYearlyTime"
         Me.dtmDepositYearlyTime.Size = New System.Drawing.Size(90, 20)
-        Me.dtmDepositYearlyTime.TabIndex = 23
+        Me.dtmDepositYearlyTime.TabIndex = 47
         '
         'frmReports
         '
+        Me.AcceptButton = Me.btnSubmit
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White

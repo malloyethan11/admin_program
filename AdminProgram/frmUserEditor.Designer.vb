@@ -54,7 +54,7 @@ Partial Class frmUserEditor
         Me.btnUpdate.Location = New System.Drawing.Point(162, 119)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(278, 42)
-        Me.btnUpdate.TabIndex = 45
+        Me.btnUpdate.TabIndex = 14
         Me.btnUpdate.Text = "Update"
         Me.btnUpdate.UseVisualStyleBackColor = True
         '
@@ -64,7 +64,7 @@ Partial Class frmUserEditor
         Me.CheckBox2.Location = New System.Drawing.Point(250, 93)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(85, 17)
-        Me.CheckBox2.TabIndex = 98
+        Me.CheckBox2.TabIndex = 8
         Me.CheckBox2.Text = "Mass pricing"
         Me.CheckBox2.UseVisualStyleBackColor = True
         '
@@ -74,7 +74,7 @@ Partial Class frmUserEditor
         Me.CheckBox1.Location = New System.Drawing.Point(250, 70)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(84, 17)
-        Me.CheckBox1.TabIndex = 99
+        Me.CheckBox1.TabIndex = 7
         Me.CheckBox1.Text = "Delete items"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
@@ -84,7 +84,7 @@ Partial Class frmUserEditor
         Me.chkAddItems.Location = New System.Drawing.Point(174, 93)
         Me.chkAddItems.Name = "chkAddItems"
         Me.chkAddItems.Size = New System.Drawing.Size(72, 17)
-        Me.chkAddItems.TabIndex = 97
+        Me.chkAddItems.TabIndex = 6
         Me.chkAddItems.Text = "Add items"
         Me.chkAddItems.UseVisualStyleBackColor = True
         '
@@ -94,7 +94,7 @@ Partial Class frmUserEditor
         Me.chkEditItem.Location = New System.Drawing.Point(174, 70)
         Me.chkEditItem.Name = "chkEditItem"
         Me.chkEditItem.Size = New System.Drawing.Size(71, 17)
-        Me.chkEditItem.TabIndex = 96
+        Me.chkEditItem.TabIndex = 5
         Me.chkEditItem.Text = "Edit items"
         Me.chkEditItem.UseVisualStyleBackColor = True
         '
@@ -104,7 +104,7 @@ Partial Class frmUserEditor
         Me.chkReturns.Location = New System.Drawing.Point(96, 93)
         Me.chkReturns.Name = "chkReturns"
         Me.chkReturns.Size = New System.Drawing.Size(63, 17)
-        Me.chkReturns.TabIndex = 95
+        Me.chkReturns.TabIndex = 4
         Me.chkReturns.Text = "Returns"
         Me.chkReturns.UseVisualStyleBackColor = True
         '
@@ -114,7 +114,7 @@ Partial Class frmUserEditor
         Me.chkCheckout.Location = New System.Drawing.Point(96, 70)
         Me.chkCheckout.Name = "chkCheckout"
         Me.chkCheckout.Size = New System.Drawing.Size(72, 17)
-        Me.chkCheckout.TabIndex = 94
+        Me.chkCheckout.TabIndex = 3
         Me.chkCheckout.Text = "Checkout"
         Me.chkCheckout.UseVisualStyleBackColor = True
         '
@@ -129,7 +129,7 @@ Partial Class frmUserEditor
         Me.txtDescription.Location = New System.Drawing.Point(96, 43)
         Me.txtDescription.Name = "txtDescription"
         Me.txtDescription.Size = New System.Drawing.Size(486, 20)
-        Me.txtDescription.TabIndex = 93
+        Me.txtDescription.TabIndex = 2
         '
         'lblPermissions
         '
@@ -172,7 +172,7 @@ Partial Class frmUserEditor
         Me.txtSKU.Location = New System.Drawing.Point(96, 16)
         Me.txtSKU.Name = "txtSKU"
         Me.txtSKU.Size = New System.Drawing.Size(486, 20)
-        Me.txtSKU.TabIndex = 92
+        Me.txtSKU.TabIndex = 1
         '
         'btnDelete
         '
@@ -183,7 +183,7 @@ Partial Class frmUserEditor
         Me.btnDelete.Location = New System.Drawing.Point(469, 119)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(113, 42)
-        Me.btnDelete.TabIndex = 101
+        Me.btnDelete.TabIndex = 15
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = True
         '
@@ -196,7 +196,7 @@ Partial Class frmUserEditor
         Me.btnExit.Location = New System.Drawing.Point(12, 119)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(113, 42)
-        Me.btnExit.TabIndex = 100
+        Me.btnExit.TabIndex = 13
         Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -206,7 +206,7 @@ Partial Class frmUserEditor
         Me.chkEdiVendors.Location = New System.Drawing.Point(340, 70)
         Me.chkEdiVendors.Name = "chkEdiVendors"
         Me.chkEdiVendors.Size = New System.Drawing.Size(85, 17)
-        Me.chkEdiVendors.TabIndex = 106
+        Me.chkEdiVendors.TabIndex = 9
         Me.chkEdiVendors.Text = "Edit vendors"
         Me.chkEdiVendors.UseVisualStyleBackColor = True
         '
@@ -216,7 +216,7 @@ Partial Class frmUserEditor
         Me.chkAddVendors.Location = New System.Drawing.Point(340, 93)
         Me.chkAddVendors.Name = "chkAddVendors"
         Me.chkAddVendors.Size = New System.Drawing.Size(86, 17)
-        Me.chkAddVendors.TabIndex = 105
+        Me.chkAddVendors.TabIndex = 10
         Me.chkAddVendors.Text = "Add vendors"
         Me.chkAddVendors.UseVisualStyleBackColor = True
         '
@@ -231,7 +231,7 @@ Partial Class frmUserEditor
         Me.chkDeleteVendors.Location = New System.Drawing.Point(431, 70)
         Me.chkDeleteVendors.Name = "chkDeleteVendors"
         Me.chkDeleteVendors.Size = New System.Drawing.Size(98, 17)
-        Me.chkDeleteVendors.TabIndex = 108
+        Me.chkDeleteVendors.TabIndex = 11
         Me.chkDeleteVendors.Text = "Delete vendors"
         Me.chkDeleteVendors.UseVisualStyleBackColor = True
         '
@@ -241,12 +241,13 @@ Partial Class frmUserEditor
         Me.chkPayInPayOut.Location = New System.Drawing.Point(431, 93)
         Me.chkPayInPayOut.Name = "chkPayInPayOut"
         Me.chkPayInPayOut.Size = New System.Drawing.Size(125, 17)
-        Me.chkPayInPayOut.TabIndex = 107
+        Me.chkPayInPayOut.TabIndex = 12
         Me.chkPayInPayOut.Text = "Pay-ins and Pay-outs"
         Me.chkPayInPayOut.UseVisualStyleBackColor = True
         '
         'frmUserEditor
         '
+        Me.AcceptButton = Me.btnUpdate
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White

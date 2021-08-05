@@ -99,7 +99,7 @@ Partial Class frmAddUser
         Me.btnAdd.Location = New System.Drawing.Point(469, 119)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(113, 42)
-        Me.btnAdd.TabIndex = 85
+        Me.btnAdd.TabIndex = 13
         Me.btnAdd.Text = "Add"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
@@ -112,7 +112,7 @@ Partial Class frmAddUser
         Me.btnExit.Location = New System.Drawing.Point(12, 119)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(113, 42)
-        Me.btnExit.TabIndex = 84
+        Me.btnExit.TabIndex = 12
         Me.btnExit.Text = "Back"
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -192,7 +192,7 @@ Partial Class frmAddUser
         Me.chkAddVendors.Location = New System.Drawing.Point(340, 93)
         Me.chkAddVendors.Name = "chkAddVendors"
         Me.chkAddVendors.Size = New System.Drawing.Size(86, 17)
-        Me.chkAddVendors.TabIndex = 5
+        Me.chkAddVendors.TabIndex = 9
         Me.chkAddVendors.Text = "Add vendors"
         Me.chkAddVendors.UseVisualStyleBackColor = True
         '
@@ -202,7 +202,7 @@ Partial Class frmAddUser
         Me.chkEdiVendors.Location = New System.Drawing.Point(340, 70)
         Me.chkEdiVendors.Name = "chkEdiVendors"
         Me.chkEdiVendors.Size = New System.Drawing.Size(85, 17)
-        Me.chkEdiVendors.TabIndex = 6
+        Me.chkEdiVendors.TabIndex = 8
         Me.chkEdiVendors.Text = "Edit vendors"
         Me.chkEdiVendors.UseVisualStyleBackColor = True
         '
@@ -212,7 +212,7 @@ Partial Class frmAddUser
         Me.chkPayInPayOut.Location = New System.Drawing.Point(431, 93)
         Me.chkPayInPayOut.Name = "chkPayInPayOut"
         Me.chkPayInPayOut.Size = New System.Drawing.Size(125, 17)
-        Me.chkPayInPayOut.TabIndex = 5
+        Me.chkPayInPayOut.TabIndex = 11
         Me.chkPayInPayOut.Text = "Pay-ins and Pay-outs"
         Me.chkPayInPayOut.UseVisualStyleBackColor = True
         '
@@ -222,7 +222,7 @@ Partial Class frmAddUser
         Me.chkDeleteVendors.Location = New System.Drawing.Point(431, 70)
         Me.chkDeleteVendors.Name = "chkDeleteVendors"
         Me.chkDeleteVendors.Size = New System.Drawing.Size(98, 17)
-        Me.chkDeleteVendors.TabIndex = 6
+        Me.chkDeleteVendors.TabIndex = 10
         Me.chkDeleteVendors.Text = "Delete vendors"
         Me.chkDeleteVendors.UseVisualStyleBackColor = True
         '
@@ -233,6 +233,7 @@ Partial Class frmAddUser
         '
         'frmAddUser
         '
+        Me.AcceptButton = Me.btnAdd
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
